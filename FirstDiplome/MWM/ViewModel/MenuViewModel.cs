@@ -8,5 +8,6 @@ namespace FirstDiplome.MWM.ViewModel
 {
     internal class MenuViewModel
     {
+
     }
 }

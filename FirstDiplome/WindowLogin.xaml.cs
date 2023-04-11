@@ -15,11 +15,19 @@ using System.Windows.Shapes;
 namespace FirstDiplome
 {
     /// <summary>
+<<<<<<< HEAD:FirstDiplome/MainWindow.xaml.cs
+    /// Логика взаимодействия для MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+=======
     /// Логика взаимодействия для WindowLogin.xaml
     /// </summary>
     public partial class WindowLogin : Window
     {
         public WindowLogin()
+>>>>>>> Начинаю прописывать backend для MenuView и Button:FirstDiplome/WindowLogin.xaml.cs
         {
             InitializeComponent();
         }
