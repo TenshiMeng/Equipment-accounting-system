@@ -13,7 +13,6 @@
                    FontSize="28"
                    HorizontalAlignment="Left"
                    Margin="0,0,0,20"/>
-
         <StackPanel Orientation="Horizontal"
                     Margin="0,0,0,10">
             <Border Width="400"
@@ -34,6 +33,7 @@
 
                 <Grid>
                     <StackPanel>
+
                         <TextBlock Text="Списание можно провести&#x0a;в соответствующем разделе"
                                    Foreground="White"
                                    FontSize="28"
@@ -47,6 +47,7 @@
                                    FontSize="13"
                                    Margin="20,10,10,0"
                                    FontFamily="/Fonts/#Finlandica"/>
+
                     </StackPanel>
 
                     <Image Width="234"
@@ -63,6 +64,7 @@
                             </TransformGroup>
                         </Image.RenderTransform>
                     </Image>
+                    <Button x:Name="ButtonTehnicue" Content="" Opacity="0" Click="ButtonTehnicue_Click"/>
                 </Grid>
             </Border>
             <Grid>
@@ -72,9 +74,6 @@
                     Height="200"
                     CornerRadius="10"
                     Margin="45,0,0,0">
-
-
-
                             <Border.Background>
                                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
                                     <GradientStop Color="#ffc554" Offset="0.0"/>
@@ -86,9 +85,7 @@
                                    FontSize="28"
                                    Margin="20,10,-35,115"/>
                         </Border>
-
                     </StackPanel>
-
                 </StackPanel>
                 <TextBlock Text="перейти в таблицу"
                                    Foreground="DarkSlateGray"
@@ -108,7 +105,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-
+                <Button x:Name="ButtonEmployees" Content="" HorizontalAlignment="Left" VerticalAlignment="Center" Height="200" Width="198" Opacity="0" Margin="47,0,0,0" Click="ButtonEmployees_Click"/>
             </Grid>
         </StackPanel>
 
@@ -136,7 +133,7 @@
                            Height="129"
                            Source="/Images/suppliers.png"
                            HorizontalAlignment="Right"
-                           VerticalAlignment="Bottom" RenderTransformOrigin="0.507,0.77" Margin="0,0,0,-13" Opacity="0.5"/>
+                           VerticalAlignment="Bottom" RenderTransformOrigin="0.507,0.77" Margin="0,0,0,-13"/>
                         <TextBlock Text="Поставки"
                         Foreground="White"
                         FontSize="28"
@@ -146,7 +143,8 @@
                         <TextBlock Text="перейти"
                                    Foreground="DarkSlateGray"
                                    FontSize="18"
-                                   Margin="20,50,0,70" HorizontalAlignment="Left" Width="179"/>
+                                   Margin="20,50,-49,70"/>
+                        <Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="149" Width="150" Click="Button_Click" Opacity="0"/>
                     </Grid>
                 </Border>
                 <Border Width="150"
@@ -158,7 +156,7 @@
                            Height="107"
                            Source="/Images/repairs.png"
                            HorizontalAlignment="Left"
-                           VerticalAlignment="Top" RenderTransformOrigin="0.507,0.77" Opacity="0.5" Margin="20,55,0,0"/>
+                           VerticalAlignment="Top" RenderTransformOrigin="0.507,0.77" Margin="20,55,0,0"/>
                         <TextBlock Text="Ремонт"
                         Foreground="White"
                         FontSize="28"
@@ -168,7 +166,8 @@
                         <TextBlock Text="перейти"
                                    Foreground="DarkSlateGray"
                                    FontSize="18"
-                                   Margin="20,50,0,70" HorizontalAlignment="Left" Width="179"/>
+                                   Margin="20,50,-49,70"/>
+                        <Button Content="Button" HorizontalAlignment="Center" Margin="0,-3,0,0" VerticalAlignment="Top" Height="153" Width="150" Opacity="0"/>
                     </Grid>
                 </Border>
 
@@ -181,7 +180,7 @@
                            Height="120"
                            Source="/Images/cabinet.png"
                            HorizontalAlignment="Left"
-                           VerticalAlignment="Top" RenderTransformOrigin="0.507,0.77" Opacity="0.5" Margin="30,65,0,0"/>
+                           VerticalAlignment="Top" RenderTransformOrigin="0.507,0.77" Margin="30,65,0,0"/>
                         <TextBlock Text="Кабинеты"
                         Foreground="White"
                         FontSize="28"
@@ -191,7 +190,8 @@
                         <TextBlock Text="перейти"
                                    Foreground="DarkSlateGray"
                                    FontSize="18"
-                                   Margin="20,50,0,70" HorizontalAlignment="Left" Width="179"/>
+                                   Margin="20,50,-49,70"/>
+                        <Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="150" Width="150" Opacity="0"/>
                     </Grid>
                 </Border>
 
@@ -203,7 +203,8 @@
                         <TextBlock Text="перейти"
                                    Foreground="DarkSlateGray"
                                    FontSize="18"
-                                   Margin="20,50,0,70" HorizontalAlignment="Left" Width="179"/>
+                                   Margin="20,50,-49,70"/>
+                        <Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="150" Width="150" Opacity="0"/>
                     </Grid>
                 </Border>
             </StackPanel>

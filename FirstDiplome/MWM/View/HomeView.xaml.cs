@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,10 +26,29 @@ namespace FirstDiplome.MWM.View
             InitializeComponent();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            WindowLogin windowLogin = new WindowLogin();
-            windowLogin.Show();
+            this.Close();
+        }
+
+        private void Close()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ButtonTest1_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ButtonTehnicue_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ButtonEmployees_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
