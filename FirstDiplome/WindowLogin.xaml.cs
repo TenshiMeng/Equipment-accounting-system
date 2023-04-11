@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace FirstDiplome
 {
     /// <summary>
-    /// Логика взаимодействия для LoginWindow.xaml
+    /// Логика взаимодействия для WindowLogin.xaml
     /// </summary>
-    public partial class LoginWindow : Page
+    public partial class WindowLogin : Window
     {
-        public LoginWindow()
+        public WindowLogin()
         {
             InitializeComponent();
         }

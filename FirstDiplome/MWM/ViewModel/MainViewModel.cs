@@ -41,14 +41,5 @@ namespace FirstDiplome.MWM.ViewModel
                 CurrentView = MenuVM;
             }));
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            LoginVM = new LoginViewModel();
-            CurrentView = LoginVM;
-            LoginViewCommand = new RelayCommand((o =>
-            {
-                CurrentView = LoginVM;
-            }));
-        }
     }
 }

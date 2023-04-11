@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" 
              d:DesignWidth="800">
-    <StackPanel>
+    <StackPanel Margin="0,0,10,0">
         <TextBlock Text="Меню"
                    Foreground="White"
                    FontSize="28"
@@ -38,17 +38,22 @@
                                    Foreground="White"
                                    FontSize="28"
                                    Margin="20,10,10,0"/>
+                        <TextBlock Text="перейти в таблицу"
+                                   Foreground="DarkSlateGray"
+                                   FontSize="18"
+                                   Margin="20,10,10,0" Width="368"/>
                         <TextBlock Text="проводи учёт вовремя!"
                                    Foreground="White"
-                                   FontSize="18"
-                                   Margin="20,10,10,0"/>
+                                   FontSize="13"
+                                   Margin="20,10,10,0"
+                                   FontFamily="/Fonts/#Finlandica"/>
                     </StackPanel>
 
                     <Image Width="234"
                            Height="239"
                            Source="/Images/man.png"
                            HorizontalAlignment="Right"
-                           VerticalAlignment="Bottom" RenderTransformOrigin="0.507,0.77" Margin="0,0,-86,-91">
+                           VerticalAlignment="Bottom" RenderTransformOrigin="0.507,0.77" Margin="0,0,-69,-80">
                         <Image.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -60,64 +65,147 @@
                     </Image>
                 </Grid>
             </Border>
-            <Border Width="200"
+            <Grid>
+                <StackPanel>
+                    <StackPanel>
+                        <Border Width="200"
                     Height="200"
                     CornerRadius="10"
                     Margin="45,0,0,0">
 
-                <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                        <GradientStop Color="#ffc554" Offset="0.0"/>
-                        <GradientStop Color="#ffb73a" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
-
-            </Border>
 
 
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                    <GradientStop Color="#ffc554" Offset="0.0"/>
+                                    <GradientStop Color="#ffb73a" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock Text="Кадровый&#xA;учёт"
+                                   Foreground="White"
+                                   FontSize="28"
+                                   Margin="20,10,-35,115"/>
+                        </Border>
+
+                    </StackPanel>
+
+                </StackPanel>
+                <TextBlock Text="перейти в таблицу"
+                                   Foreground="DarkSlateGray"
+                                   FontSize="18"
+                                   Margin="66,88,0,85" HorizontalAlignment="Left" Width="179"/>
+                <Image Width="191"
+                           Height="182"
+                           Source="/Images/teamworkone.png"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Bottom" RenderTransformOrigin="0.507,0.77" Margin="0,0,5,0">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-0.505"/>
+                            <RotateTransform Angle="-0.819"/>
+                            <TranslateTransform X="-1.526"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+
+            </Grid>
         </StackPanel>
 
         <StackPanel>
-
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="Margin" Value="15,0,0,0"/>
                 </Style>
             </StackPanel.Resources>
 
-                <TextBlock Text="Ремонт"
+            <TextBlock Text="Ремонт"
                    Foreground="White"
                    FontSize="20"
                    HorizontalAlignment="Left"
                    Margin="0,0,0,10"/>
 
             <StackPanel Orientation="Horizontal">
-                <StackPanel>
-                    
-                </StackPanel>
                 <Border Width="150"
-                        Height="150"
+                        Height="149"
                         Background="#844eff"
                         CornerRadius="10"
                         Margin="0">
-                    <Button Content="Button" Click="Button_Click"/>
+                    <Grid>
+                        <Image Width="96"
+                           Height="129"
+                           Source="/Images/suppliers.png"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Bottom" RenderTransformOrigin="0.507,0.77" Margin="0,0,0,-13" Opacity="0.5"/>
+                        <TextBlock Text="Поставки"
+                        Foreground="White"
+                        FontSize="28"
+                        HorizontalAlignment="Left"
+                        Margin="20,10,0,0" Width="130" Height="40" VerticalAlignment="Top"
+                        FontFamily="/Fonts/#Finlandica"/>
+                        <TextBlock Text="перейти"
+                                   Foreground="DarkSlateGray"
+                                   FontSize="18"
+                                   Margin="20,50,0,70" HorizontalAlignment="Left" Width="179"/>
+                    </Grid>
                 </Border>
-
-
                 <Border Width="150"
                         Height="150"
-                        Background="#4e99ff"
-                        CornerRadius="10"/>
+                        Background="#FF347BED"
+                        CornerRadius="10">
+                    <Grid>
+                        <Image Width="150"
+                           Height="107"
+                           Source="/Images/repairs.png"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top" RenderTransformOrigin="0.507,0.77" Opacity="0.5" Margin="20,55,0,0"/>
+                        <TextBlock Text="Ремонт"
+                        Foreground="White"
+                        FontSize="28"
+                        HorizontalAlignment="Left"
+                        Margin="20,10,0,0" Width="130" Height="40" VerticalAlignment="Top"
+                        FontFamily="/Fonts/#Finlandica"/>
+                        <TextBlock Text="перейти"
+                                   Foreground="DarkSlateGray"
+                                   FontSize="18"
+                                   Margin="20,50,0,70" HorizontalAlignment="Left" Width="179"/>
+                    </Grid>
+                </Border>
 
                 <Border Width="150"
                         Height="150"
                         Background="#4eff91"
-                        CornerRadius="10"/>
+                        CornerRadius="10">
+                    <Grid>
+                        <Image Width="141"
+                           Height="120"
+                           Source="/Images/cabinet.png"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top" RenderTransformOrigin="0.507,0.77" Opacity="0.5" Margin="30,65,0,0"/>
+                        <TextBlock Text="Кабинеты"
+                        Foreground="White"
+                        FontSize="28"
+                        HorizontalAlignment="Left"
+                        Margin="20,10,0,0" Width="130" Height="40" VerticalAlignment="Top"
+                        FontFamily="/Fonts/#Finlandica"/>
+                        <TextBlock Text="перейти"
+                                   Foreground="DarkSlateGray"
+                                   FontSize="18"
+                                   Margin="20,50,0,70" HorizontalAlignment="Left" Width="179"/>
+                    </Grid>
+                </Border>
 
                 <Border Width="150"
                         Height="150"
                         Background="#ecff4e"
-                        CornerRadius="10"/>
+                        CornerRadius="10">
+                    <Grid>
+                        <TextBlock Text="перейти"
+                                   Foreground="DarkSlateGray"
+                                   FontSize="18"
+                                   Margin="20,50,0,70" HorizontalAlignment="Left" Width="179"/>
+                    </Grid>
+                </Border>
             </StackPanel>
         </StackPanel>
     </StackPanel>
