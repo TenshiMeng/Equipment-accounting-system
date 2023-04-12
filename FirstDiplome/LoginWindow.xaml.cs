@@ -16,10 +16,10 @@ namespace FirstDiplome
         {
             InitializeComponent();
         }
-        LebedevEnd1Entities1 lebedevEnd1Entities1 = new LebedevEnd1Entities1();
+        LebedevEnd1Entities lebedevEnd1Entities = new LebedevEnd1Entities();
         private void Authorization(object sender, RoutedEventArgs e)
         {
-            var CurrentUser = AppData.lebedevEnd1Entities1.Users.FirstOrDefault(u => u.Login == tb1.Text && u.Password == tb2.Password);
+            var CurrentUser = AppData.lebedevEnd1Entities.Users.FirstOrDefault(u => u.Login == tb1.Text && u.Password == tb2.Password);
             if (CurrentUser != null)
             {
                 MainWindow window = new MainWindow();

@@ -15,10 +15,10 @@ namespace FirstDiplome
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class LebedevEnd1Entities1 : DbContext
+    public partial class LebedevEnd1Entities : DbContext
     {
-        public LebedevEnd1Entities1()
-            : base("name=LebedevEnd1Entities1")
+        public LebedevEnd1Entities()
+            : base("name=LebedevEnd1Entities")
         {
         }
     
@@ -34,6 +34,7 @@ namespace FirstDiplome
         public virtual DbSet<Technic> Technic { get; set; }
         public virtual DbSet<TypesAvailability> TypesAvailability { get; set; }
         public virtual DbSet<TypesConditions> TypesConditions { get; set; }
+        public virtual DbSet<TypesGender> TypesGender { get; set; }
         public virtual DbSet<TypesLocate> TypesLocate { get; set; }
         public virtual DbSet<TypesRepair> TypesRepair { get; set; }
         public virtual DbSet<Users> Users { get; set; }

@@ -17,6 +17,8 @@
           <Property Name="DateBirthdayEmployee" Type="date" />
           <Property Name="Passport" Type="varchar" MaxLength="10" />
           <Property Name="Issued" Type="varchar(max)" />
+          <Property Name="EmailEmployees" Type="int" />
+          <Property Name="GenderEmployess" Type="int" />
         </EntityType>
         <EntityType Name="Repair">
           <Key>
@@ -84,6 +86,13 @@
           <Property Name="TypeConditions" Type="varchar" MaxLength="50" />
           <Property Name="CodeConditions" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="TypesGender">
+          <Key>
+            <PropertyRef Name="IdGender" />
+          </Key>
+          <Property Name="TypeGender" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="IdGender" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="TypesLocate">
           <Key>
             <PropertyRef Name="CodeLocate" />
@@ -107,6 +116,30 @@
           <Property Name="Password" Type="nchar" MaxLength="15" />
           <Property Name="Role" Type="varchar" MaxLength="50" />
         </EntityType>
+        <Association Name="FK_Employee_TypesGender">
+          <End Role="TypesGender" Type="Self.TypesGender" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypesGender">
+              <PropertyRef Name="IdGender" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="GenderEmployess" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="EmailEmployees" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Repair_Employee">
           <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
           <End Role="Repair" Type="Self.Repair" Multiplicity="*" />
@@ -254,9 +287,18 @@
           <EntitySet Name="Technic" EntityType="Self.Technic" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TypesAvailability" EntityType="Self.TypesAvailability" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TypesConditions" EntityType="Self.TypesConditions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypesGender" EntityType="Self.TypesGender" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TypesLocate" EntityType="Self.TypesLocate" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TypesRepair" EntityType="Self.TypesRepair" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Employee_TypesGender" Association="Self.FK_Employee_TypesGender">
+            <End Role="TypesGender" EntitySet="TypesGender" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Users" Association="Self.FK_Employee_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
           <AssociationSet Name="FK_Repair_Employee" Association="Self.FK_Repair_Employee">
             <End Role="Employee" EntitySet="Employee" />
             <End Role="Repair" EntitySet="Repair" />
@@ -311,6 +353,10 @@
           <Property Name="DateBirthdayEmployee" Type="DateTime" Precision="0" />
           <Property Name="Passport" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="Issued" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="EmailEmployees" Type="Int32" />
+          <Property Name="GenderEmployess" Type="Int32" />
+          <NavigationProperty Name="TypesGender" Relationship="Self.FK_Employee_TypesGender" FromRole="Employee" ToRole="TypesGender" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_Employee_Users" FromRole="Employee" ToRole="Users" />
           <NavigationProperty Name="Repair" Relationship="Self.FK_Repair_Employee" FromRole="Employee" ToRole="Repair" />
           <NavigationProperty Name="Technic" Relationship="Self.FK_Technic_Employee" FromRole="Employee" ToRole="Technic" />
         </EntityType>
@@ -394,6 +440,14 @@
           <Property Name="CodeConditions" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Technic" Relationship="Self.FK_Technic_TypesConditions" FromRole="TypesConditions" ToRole="Technic" />
         </EntityType>
+        <EntityType Name="TypesGender">
+          <Key>
+            <PropertyRef Name="IdGender" />
+          </Key>
+          <Property Name="TypeGender" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IdGender" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_TypesGender" FromRole="TypesGender" ToRole="Employee" />
+        </EntityType>
         <EntityType Name="TypesLocate">
           <Key>
             <PropertyRef Name="CodeLocate" />
@@ -418,7 +472,32 @@
           <Property Name="Login" Type="String" MaxLength="35" FixedLength="true" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
           <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_Users" FromRole="Users" ToRole="Employee" />
         </EntityType>
+        <Association Name="FK_Employee_TypesGender">
+          <End Role="TypesGender" Type="Self.TypesGender" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypesGender">
+              <PropertyRef Name="IdGender" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="GenderEmployess" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="EmailEmployees" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Repair_Employee">
           <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
           <End Role="Repair" Type="Self.Repair" Multiplicity="*" />
@@ -527,7 +606,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="LebedevEnd1Entities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="LebedevEnd1Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Employee" EntityType="Self.Employee" />
           <EntitySet Name="Repair" EntityType="Self.Repair" />
           <EntitySet Name="Supplier" EntityType="Self.Supplier" />
@@ -535,9 +614,18 @@
           <EntitySet Name="Technic" EntityType="Self.Technic" />
           <EntitySet Name="TypesAvailability" EntityType="Self.TypesAvailability" />
           <EntitySet Name="TypesConditions" EntityType="Self.TypesConditions" />
+          <EntitySet Name="TypesGender" EntityType="Self.TypesGender" />
           <EntitySet Name="TypesLocate" EntityType="Self.TypesLocate" />
           <EntitySet Name="TypesRepair" EntityType="Self.TypesRepair" />
           <EntitySet Name="Users" EntityType="Self.Users" />
+          <AssociationSet Name="FK_Employee_TypesGender" Association="Self.FK_Employee_TypesGender">
+            <End Role="TypesGender" EntitySet="TypesGender" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Users" Association="Self.FK_Employee_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
           <AssociationSet Name="FK_Repair_Employee" Association="Self.FK_Repair_Employee">
             <End Role="Employee" EntitySet="Employee" />
             <End Role="Repair" EntitySet="Repair" />
@@ -621,7 +709,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище LebedevEnd1ModelContainer" CdmEntityContainer="LebedevEnd1Entities1">
+        <EntityContainerMapping StorageEntityContainer="Хранилище LebedevEnd1ModelContainer" CdmEntityContainer="LebedevEnd1Entities">
           <EntitySetMapping Name="Employee">
             <EntityTypeMapping TypeName="LebedevEnd1Model.Employee">
               <MappingFragment StoreEntitySet="Employee">
@@ -633,6 +721,8 @@
                 <ScalarProperty Name="DateBirthdayEmployee" ColumnName="DateBirthdayEmployee" />
                 <ScalarProperty Name="Passport" ColumnName="Passport" />
                 <ScalarProperty Name="Issued" ColumnName="Issued" />
+                <ScalarProperty Name="EmailEmployees" ColumnName="EmailEmployees" />
+                <ScalarProperty Name="GenderEmployess" ColumnName="GenderEmployess" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -705,6 +795,14 @@
               <MappingFragment StoreEntitySet="TypesConditions">
                 <ScalarProperty Name="TypeConditions" ColumnName="TypeConditions" />
                 <ScalarProperty Name="CodeConditions" ColumnName="CodeConditions" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypesGender">
+            <EntityTypeMapping TypeName="LebedevEnd1Model.TypesGender">
+              <MappingFragment StoreEntitySet="TypesGender">
+                <ScalarProperty Name="TypeGender" ColumnName="TypeGender" />
+                <ScalarProperty Name="IdGender" ColumnName="IdGender" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

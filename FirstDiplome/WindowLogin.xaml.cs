@@ -21,7 +21,7 @@ namespace FirstDiplome
     /// </summary>
     public partial class WindowLogin : Window
     {
-        LebedevEnd1Entities1 lebedevEnd1Entities1 = new LebedevEnd1Entities1();
+        LebedevEnd1Entities lebedevEnd1Entities = new LebedevEnd1Entities();
         public WindowLogin()
         {
             InitializeComponent();
@@ -60,12 +60,11 @@ namespace FirstDiplome
 
         private void loginBtn_Click(object sender, RoutedEventArgs e)
         {
-            var CurrentUser = AppData.lebedevEnd1Entities1.Users.FirstOrDefault(u => u.Login == txtUsername.Text && u.Password == txtPassword.Password);
+            var CurrentUser = AppData.lebedevEnd1Entities.Users.FirstOrDefault(u => u.Login == txtUsername.Text && u.Password == txtPassword.Password);
             if (CurrentUser != null)
             {
                 MainWindow window = new MainWindow();
                 window.Show();
-
             }
             else
             {

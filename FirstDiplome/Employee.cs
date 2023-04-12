@@ -29,7 +29,11 @@ namespace FirstDiplome
         public Nullable<System.DateTime> DateBirthdayEmployee { get; set; }
         public string Passport { get; set; }
         public string Issued { get; set; }
+        public Nullable<int> EmailEmployees { get; set; }
+        public Nullable<int> GenderEmployess { get; set; }
     
+        public virtual TypesGender TypesGender { get; set; }
+        public virtual Users Users { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Repair> Repair { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

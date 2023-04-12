@@ -4,17 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d49cf24f08f347259cb900e69713ce56" Name="Diagram1">
-        <EntityTypeShape EntityType="LebedevEnd1Model.Employee" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LebedevEnd1Model.Repair" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LebedevEnd1Model.Supplier" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="LebedevEnd1Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LebedevEnd1Model.Technic" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="LebedevEnd1Model.TypesAvailability" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LebedevEnd1Model.TypesConditions" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="LebedevEnd1Model.TypesLocate" Width="1.5" PointX="3" PointY="14.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="LebedevEnd1Model.TypesRepair" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="LebedevEnd1Model.Users" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="c8930c0c01794807917925850efdb588" Name="Diagram1">
+        <EntityTypeShape EntityType="LebedevEnd1Model.Employee" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="LebedevEnd1Model.Repair" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LebedevEnd1Model.Supplier" Width="1.5" PointX="4.875" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LebedevEnd1Model.sysdiagrams" Width="1.5" PointX="10.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LebedevEnd1Model.Technic" Width="1.5" PointX="7.5" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LebedevEnd1Model.TypesAvailability" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LebedevEnd1Model.TypesConditions" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LebedevEnd1Model.TypesGender" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LebedevEnd1Model.TypesLocate" Width="1.5" PointX="5.25" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LebedevEnd1Model.TypesRepair" Width="1.5" PointX="2.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="LebedevEnd1Model.Users" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="LebedevEnd1Model.FK_Employee_TypesGender" ManuallyRouted="false" />
+        <AssociationConnector Association="LebedevEnd1Model.FK_Employee_Users" ManuallyRouted="false" />
         <AssociationConnector Association="LebedevEnd1Model.FK_Repair_Employee" ManuallyRouted="false" />
         <AssociationConnector Association="LebedevEnd1Model.FK_Technic_Employee" ManuallyRouted="false" />
         <AssociationConnector Association="LebedevEnd1Model.FK_Repair_Technic" ManuallyRouted="false" />
