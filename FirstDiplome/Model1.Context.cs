@@ -15,10 +15,10 @@ namespace FirstDiplome
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class LebedevEnd1Entities : DbContext
+    public partial class LebedevEnd1Entities1 : DbContext
     {
-        public LebedevEnd1Entities()
-            : base("name=LebedevEnd1Entities")
+        public LebedevEnd1Entities1()
+            : base("name=LebedevEnd1Entities1")
         {
         }
     
@@ -37,7 +37,7 @@ namespace FirstDiplome
         public virtual DbSet<TypesLocate> TypesLocate { get; set; }
         public virtual DbSet<TypesRepair> TypesRepair { get; set; }
         public virtual DbSet<Users> Users { get; set; }
-
+    
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {
             var diagramnameParameter = diagramname != null ?

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using FirstDiplome.Properties;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -15,20 +16,23 @@ namespace FirstDiplome
         {
             InitializeComponent();
         }
-        LebedevEnd1Entities lebedevEnd1 = new LebedevEnd1Entities();
+        LebedevEnd1Entities1 lebedevEnd1Entities1 = new LebedevEnd1Entities1();
         private void Authorization(object sender, RoutedEventArgs e)
         {
-            //var CurrentUser = lebedevEnd1.LebedevEnd1Entities.First(u => u.Login == tb1.Text && u.Password == tb2.Password);
-            //if (CurrentUser != null)
-            //{
-            //    MainWindow window = new MainWindow();
-            //    window.Show();
-            //    this.Close();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Данного пользователя нет в базе данных!");
-            //}
+            var CurrentUser = AppData.lebedevEnd1Entities1.Users.FirstOrDefault(u => u.Login == tb1.Text && u.Password == tb2.Password);
+            if (CurrentUser != null)
+            {
+                MainWindow window = new MainWindow();
+                window.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Данного пользователя нет в базе данных!");
+                MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+            }
         }
 
         private void Close_MouseDown(object sender, MouseButtonEventArgs e)

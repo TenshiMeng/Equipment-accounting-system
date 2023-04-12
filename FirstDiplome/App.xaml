@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:FirstDiplome"
              xmlns:viewModel="clr-namespace:FirstDiplome.MWM.ViewModel"
              xmlns:view="clr-namespace:FirstDiplome.MWM.View"
-             StartupUri="MainWindow.xaml">
+             StartupUri="LoginWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
