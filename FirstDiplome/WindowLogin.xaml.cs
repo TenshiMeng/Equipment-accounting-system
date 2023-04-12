@@ -83,5 +83,23 @@ namespace FirstDiplome
             this.Close();
             createUserWindow.ShowDialog();          
         }
+
+
+        private void Check_Click(object sender, RoutedEventArgs e)
+        {
+            var check = sender as CheckBox;
+            if (check.IsChecked.Value)
+            {
+                //txt.Text = txtPassword.Password;
+                //txtPassword.Visibility = Visibility.Visible;
+                ////txtPassword.Password = "";
+            }
+            else
+            {
+                //tb2.Password = PassTB.Text;
+                //PassTB.Visibility = Visibility.Hidden;
+                //tb2.Visibility = Visibility.Visible;
+            }
+        }
     }
 }
