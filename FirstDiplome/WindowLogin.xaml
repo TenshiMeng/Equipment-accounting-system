@@ -20,18 +20,17 @@
                 <materialDesign:PopupBox HorizontalAlignment="Right" Margin="0 20 20 0" 
                   PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Height="25">
                     <StackPanel>
-                        <StackPanel Margin="16 10 0 6" Orientation="Horizontal" 
+                        <StackPanel Margin="5 5 0 5" Orientation="Horizontal" 
                                     HorizontalAlignment="Center">
 
                             <TextBlock VerticalAlignment="Center" Text="Активировать тёмную тему"/>
                             <ToggleButton Cursor="Hand" ToolTip="Включить темную тему" Margin="12 0 8 0" x:Name="themeToggle" IsChecked="{Binding IsDarkTheme}" Click="toggleTheme"/>
                         </StackPanel>
 
-                        <Button ToolTip="У вас проблемы со входом?" Margin="0 800" Content="Помогите мне"/>
-                        <Button x:Name="btn_exit" ToolTip="Выход" Content="Закрыть приложение" Click="exitApp"/>
+
                     </StackPanel>
                 </materialDesign:PopupBox>
-                <Image Source="/Images/logo.png" Height="224" Width="388" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill" StretchDirection="DownOnly">
+                <Image Source="/Images/logo.png" Height="195" Width="344" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill" StretchDirection="DownOnly">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -57,10 +56,10 @@
                 <Button Margin="0 20 0 0" x:Name="loginBtn" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0"
                         Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10"
                         FontSize="18" Content="Войти в систему" Click="loginBtn_Click"/>
-
-                <Button Margin="0 20 0 0" x:Name="signupBtn" Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0"
-                        Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Создать аккаунт" />
-
+                <Grid Width="400" Height="66">
+                    <Button x:Name="signupBtn" Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Width="190" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Создать аккаунт" HorizontalAlignment="Left" Click="signupBtn_Click" Height="50" VerticalAlignment="Top" Margin="10,18,0,0"/>
+                    <Button x:Name="closeBtn" Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Width="175" HorizontalAlignment="Left" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Выйти" RenderTransformOrigin="0.582,-0.806" Click="closeBtn_Click" Margin="215,18,0,0" Height="50" VerticalAlignment="Top" Foreground="#FFF32121" />
+                </Grid>
             </StackPanel>
         </materialDesign:DialogHost>
     </materialDesign:Card>

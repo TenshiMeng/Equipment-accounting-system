@@ -72,5 +72,17 @@ namespace FirstDiplome
                 MessageBox.Show("Неверный логин или пароль!");
             }
         }
+
+        private void closeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void signupBtn_Click(object sender, RoutedEventArgs e)
+        {            
+            CreateUserWindow createUserWindow = new CreateUserWindow();
+            this.Close();
+            createUserWindow.ShowDialog();          
+        }
     }
 }
