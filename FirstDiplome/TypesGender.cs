@@ -18,6 +18,7 @@ namespace FirstDiplome
         public TypesGender()
         {
             this.Employee = new HashSet<Employee>();
+            this.Users = new HashSet<Users>();
         }
     
         public string TypeGender { get; set; }
@@ -25,5 +26,7 @@ namespace FirstDiplome
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Employee> Employee { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Users> Users { get; set; }
     }
 }

@@ -60,7 +60,7 @@ namespace FirstDiplome
 
         private void loginBtn_Click(object sender, RoutedEventArgs e)
         {
-            var CurrentUser = AppData.lebedevEnd1Entities.Users.FirstOrDefault(u => u.Login == txtUsername.Text && u.Password == txtPassword.Password);
+            var CurrentUser = AppData.lebedevEnd1Entities.Users.FirstOrDefault(u => u.UserLogin == txtUsername.Text && u.UserPassword == txtPassword.Password);
             if (CurrentUser != null)
             {
                 MainWindow window = new MainWindow();
@@ -78,10 +78,9 @@ namespace FirstDiplome
         }
 
         private void signupBtn_Click(object sender, RoutedEventArgs e)
-        {            
-            CreateUserWindow createUserWindow = new CreateUserWindow();
-            this.Close();
-            createUserWindow.ShowDialog();          
+        {
+            RegWindow regWindow = new RegWindow();
+            regWindow.ShowDialog();
         }
 
 

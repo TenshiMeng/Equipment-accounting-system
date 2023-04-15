@@ -17,7 +17,7 @@
           <Property Name="DateBirthdayEmployee" Type="date" />
           <Property Name="Passport" Type="varchar" MaxLength="10" />
           <Property Name="Issued" Type="varchar(max)" />
-          <Property Name="EmailEmployees" Type="int" />
+          <Property Name="EmailEmployees" Type="varchar" MaxLength="35" />
           <Property Name="GenderEmployess" Type="int" />
         </EntityType>
         <EntityType Name="Repair">
@@ -109,12 +109,17 @@
         </EntityType>
         <EntityType Name="Users">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="CodeUsers" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Login" Type="nchar" MaxLength="35" />
-          <Property Name="Password" Type="nchar" MaxLength="15" />
-          <Property Name="Role" Type="varchar" MaxLength="50" />
+          <Property Name="CodeUsers" Type="int" Nullable="false" />
+          <Property Name="UserLogin" Type="varchar" MaxLength="50" />
+          <Property Name="UserPassword" Type="varchar" MaxLength="50" />
+          <Property Name="UserRole" Type="varchar" MaxLength="50" />
+          <Property Name="UserGender" Type="int" />
+          <Property Name="UserEmail" Type="varchar" MaxLength="50" />
+          <Property Name="UserNumber" Type="varchar" MaxLength="50" />
+          <Property Name="UserDateOfBirthday" Type="date" />
+          <Property Name="UserFullName" Type="varchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_Employee_TypesGender">
           <End Role="TypesGender" Type="Self.TypesGender" Multiplicity="0..1" />
@@ -125,18 +130,6 @@
             </Principal>
             <Dependent Role="Employee">
               <PropertyRef Name="GenderEmployess" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Employee_Users">
-          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
-          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Employee">
-              <PropertyRef Name="EmailEmployees" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -248,6 +241,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Users_TypesGender">
+          <End Role="TypesGender" Type="Self.TypesGender" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypesGender">
+              <PropertyRef Name="IdGender" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="UserGender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -295,10 +300,6 @@
             <End Role="TypesGender" EntitySet="TypesGender" />
             <End Role="Employee" EntitySet="Employee" />
           </AssociationSet>
-          <AssociationSet Name="FK_Employee_Users" Association="Self.FK_Employee_Users">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="Employee" EntitySet="Employee" />
-          </AssociationSet>
           <AssociationSet Name="FK_Repair_Employee" Association="Self.FK_Repair_Employee">
             <End Role="Employee" EntitySet="Employee" />
             <End Role="Repair" EntitySet="Repair" />
@@ -335,6 +336,10 @@
             <End Role="TypesLocate" EntitySet="TypesLocate" />
             <End Role="Technic" EntitySet="Technic" />
           </AssociationSet>
+          <AssociationSet Name="FK_Users_TypesGender" Association="Self.FK_Users_TypesGender">
+            <End Role="TypesGender" EntitySet="TypesGender" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -353,10 +358,9 @@
           <Property Name="DateBirthdayEmployee" Type="DateTime" Precision="0" />
           <Property Name="Passport" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="Issued" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="EmailEmployees" Type="Int32" />
+          <Property Name="EmailEmployees" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
           <Property Name="GenderEmployess" Type="Int32" />
           <NavigationProperty Name="TypesGender" Relationship="Self.FK_Employee_TypesGender" FromRole="Employee" ToRole="TypesGender" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_Employee_Users" FromRole="Employee" ToRole="Users" />
           <NavigationProperty Name="Repair" Relationship="Self.FK_Repair_Employee" FromRole="Employee" ToRole="Repair" />
           <NavigationProperty Name="Technic" Relationship="Self.FK_Technic_Employee" FromRole="Employee" ToRole="Technic" />
         </EntityType>
@@ -447,6 +451,7 @@
           <Property Name="TypeGender" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="IdGender" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_TypesGender" FromRole="TypesGender" ToRole="Employee" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_Users_TypesGender" FromRole="TypesGender" ToRole="Users" />
         </EntityType>
         <EntityType Name="TypesLocate">
           <Key>
@@ -466,13 +471,18 @@
         </EntityType>
         <EntityType Name="Users">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="CodeUsers" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Login" Type="String" MaxLength="35" FixedLength="true" Unicode="true" />
-          <Property Name="Password" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
-          <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_Users" FromRole="Users" ToRole="Employee" />
+          <Property Name="CodeUsers" Type="Int32" Nullable="false" />
+          <Property Name="UserLogin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserRole" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserGender" Type="Int32" />
+          <Property Name="UserEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserDateOfBirthday" Type="DateTime" Precision="0" />
+          <Property Name="UserFullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TypesGender" Relationship="Self.FK_Users_TypesGender" FromRole="Users" ToRole="TypesGender" />
         </EntityType>
         <Association Name="FK_Employee_TypesGender">
           <End Role="TypesGender" Type="Self.TypesGender" Multiplicity="0..1" />
@@ -483,18 +493,6 @@
             </Principal>
             <Dependent Role="Employee">
               <PropertyRef Name="GenderEmployess" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Employee_Users">
-          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
-          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Employee">
-              <PropertyRef Name="EmailEmployees" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -606,6 +604,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Users_TypesGender">
+          <End Role="TypesGender" Type="Self.TypesGender" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypesGender">
+              <PropertyRef Name="IdGender" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="UserGender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="LebedevEnd1Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Employee" EntityType="Self.Employee" />
           <EntitySet Name="Repair" EntityType="Self.Repair" />
@@ -620,10 +630,6 @@
           <EntitySet Name="Users" EntityType="Self.Users" />
           <AssociationSet Name="FK_Employee_TypesGender" Association="Self.FK_Employee_TypesGender">
             <End Role="TypesGender" EntitySet="TypesGender" />
-            <End Role="Employee" EntitySet="Employee" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Employee_Users" Association="Self.FK_Employee_Users">
-            <End Role="Users" EntitySet="Users" />
             <End Role="Employee" EntitySet="Employee" />
           </AssociationSet>
           <AssociationSet Name="FK_Repair_Employee" Association="Self.FK_Repair_Employee">
@@ -661,6 +667,10 @@
           <AssociationSet Name="FK_Technic_TypesLocate" Association="Self.FK_Technic_TypesLocate">
             <End Role="TypesLocate" EntitySet="TypesLocate" />
             <End Role="Technic" EntitySet="Technic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_TypesGender" Association="Self.FK_Users_TypesGender">
+            <End Role="TypesGender" EntitySet="TypesGender" />
+            <End Role="Users" EntitySet="Users" />
           </AssociationSet>
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -825,10 +835,15 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="LebedevEnd1Model.Users">
               <MappingFragment StoreEntitySet="Users">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Login" ColumnName="Login" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="CodeUsers" ColumnName="CodeUsers" />
+                <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+                <ScalarProperty Name="UserGender" ColumnName="UserGender" />
+                <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+                <ScalarProperty Name="UserNumber" ColumnName="UserNumber" />
+                <ScalarProperty Name="UserDateOfBirthday" ColumnName="UserDateOfBirthday" />
+                <ScalarProperty Name="UserFullName" ColumnName="UserFullName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
