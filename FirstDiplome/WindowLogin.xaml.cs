@@ -80,6 +80,7 @@ namespace FirstDiplome
         private void signupBtn_Click(object sender, RoutedEventArgs e)
         {
             RegWindow regWindow = new RegWindow();
+            this.Close();
             regWindow.ShowDialog();
         }
 

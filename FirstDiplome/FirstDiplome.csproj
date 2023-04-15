@@ -136,6 +136,12 @@
     <Compile Include="TypesRepair.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\MyOption.xaml.cs">
+      <DependentUpon>MyOption.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MyTextBox.xaml.cs">
+      <DependentUpon>MyTextBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -177,6 +183,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Theme\TextboxTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\MyOption.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\MyTextBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
