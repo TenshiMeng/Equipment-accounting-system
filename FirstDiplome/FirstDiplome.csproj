@@ -43,6 +43,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=2.1.2.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.2.1.2\lib\net462\MaterialDesignColors.dll</HintPath>
     </Reference>
@@ -177,7 +180,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MWM\ViewModel\HomeViewModel.cs" />
-    <Compile Include="MWM\ViewModel\LoginViewModel.cs" />
     <Compile Include="MWM\ViewModel\MainViewModel.cs" />
     <Compile Include="MWM\ViewModel\MenuViewModel.cs" />
     <Compile Include="MWM\View\HomeView.xaml.cs">
@@ -222,6 +224,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MWM\Model\" />
+    <Folder Include="Window\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\man.png" />
@@ -245,6 +248,8 @@
     <Resource Include="Images\logo.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\close.png" />
+    <Resource Include="Images\minimalize.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

@@ -116,7 +116,7 @@
                 </Style>
             </StackPanel.Resources>
 
-            <TextBlock Text="Ремонт"
+            <TextBlock Text="Таблицы информационной системы"
                    Foreground="White"
                    FontSize="20"
                    HorizontalAlignment="Left"

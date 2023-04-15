@@ -24,5 +24,10 @@ namespace FirstDiplome.MWM.View
         {
             InitializeComponent();
         }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

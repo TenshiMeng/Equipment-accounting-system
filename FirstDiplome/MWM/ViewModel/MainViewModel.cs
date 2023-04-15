@@ -10,10 +10,9 @@ namespace FirstDiplome.MWM.ViewModel
 
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand MenuViewCommand { get; set; }
-        public RelayCommand LoginViewCommand { get; set; }
+
         public HomeViewModel HomeVM { get; set; }
 
-        public LoginViewModel LoginVM { get; set; }
         public MenuViewModel MenuVM { get; set; }
         private object _currentView;
         public object CurrentView

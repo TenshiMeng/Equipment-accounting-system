@@ -5,10 +5,108 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FirstDiplome.MWM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
-             Background="#1B1B1B">
-    <Grid>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}"/>
+             d:DesignHeight="450" 
+             d:DesignWidth="800">
+    <StackPanel Margin="0,0,10,0">
+        <TextBlock Text="Меню"
+                   Foreground="White"
+                   FontSize="28"
+                   HorizontalAlignment="Left"
+                   Margin="0,0,0,20"/>
+        <StackPanel Orientation="Horizontal"
+                    Margin="0,0,0,10">
+            <Border Width="400"
+                    Height="200">
 
-    </Grid>
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#5bc3ff" Offset="0.0"/>
+                        <GradientStop Color="#3aa0ff" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                                       RadiusY="10"
+                                       Rect="0,0,400,200"/>
+                </Border.Clip>
+
+                <Grid>
+                    <StackPanel>
+
+                        <TextBlock Text="Списание можно провести&#x0a;в соответствующем разделе"
+                                   Foreground="White"
+                                   FontSize="28"
+                                   Margin="20,10,10,0"/>
+                        <TextBlock Text="перейти в таблицу"
+                                   Foreground="DarkSlateGray"
+                                   FontSize="18"
+                                   Margin="20,10,10,0" Width="368"/>
+                        <TextBlock Text="проводи учёт вовремя!"
+                                   Foreground="White"
+                                   FontSize="13"
+                                   Margin="20,10,10,0"
+                                   FontFamily="/Fonts/#Finlandica"/>
+
+                    </StackPanel>
+
+                    <Image Width="234"
+                           Height="239"
+                           Source="/Images/man.png"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Bottom" RenderTransformOrigin="0.507,0.77" Margin="0,0,-69,-80">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-14.34"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <Button x:Name="Button1" Content="" Opacity="0"/>
+                </Grid>
+            </Border>
+            <Grid>
+                <StackPanel>
+                    <StackPanel>
+                        <Border Width="200"
+                    Height="200"
+                    CornerRadius="10"
+                    Margin="45,0,0,0">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                    <GradientStop Color="#ffc554" Offset="0.0"/>
+                                    <GradientStop Color="#ffb73a" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock Text="Кадровый&#xA;учёт"
+                                   Foreground="White"
+                                   FontSize="28"
+                                   Margin="20,10,-35,115"/>
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+                <TextBlock Text="перейти в таблицу"
+                                   Foreground="DarkSlateGray"
+                                   FontSize="18"
+                                   Margin="66,88,0,85" HorizontalAlignment="Left" Width="179"/>
+                <Image Width="191"
+                           Height="182"
+                           Source="/Images/teamworkone.png"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Bottom" RenderTransformOrigin="0.507,0.77" Margin="0,0,5,0">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-0.505"/>
+                            <RotateTransform Angle="-0.819"/>
+                            <TranslateTransform X="-1.526"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Button x:Name="Button2" Content="" HorizontalAlignment="Left" VerticalAlignment="Center" Height="200" Width="198" Opacity="0" Margin="47,0,0,0" Click="Button2_Click"/>
+            </Grid>
+        </StackPanel>
+    </StackPanel>
 </UserControl>

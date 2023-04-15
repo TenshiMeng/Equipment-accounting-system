@@ -24,7 +24,7 @@
                                     HorizontalAlignment="Center">
 
                             <TextBlock VerticalAlignment="Center" Text="Активировать тёмную тему"/>
-                            <ToggleButton Cursor="Hand" ToolTip="Включить темную тему" Margin="12 0 8 0" x:Name="themeToggle" IsChecked="{Binding IsDarkTheme}" Click="toggleTheme"/>
+                            <ToggleButton Cursor="Hand" ToolTip="Включить темную тему" Margin="12 0 8 0" FontFamily="/Fonts/#Finlandica" x:Name="themeToggle" IsChecked="{Binding IsDarkTheme}" Click="toggleTheme"/>
                         </StackPanel>
 
 
@@ -41,17 +41,17 @@
                     </Image.RenderTransform>
                 </Image>
                 <TextBlock Margin="0 25 0 5" HorizontalAlignment="Center" FontSize="28"
-                                   FontWeight="Bold" Text="С возвращением!"/>
+                                   FontWeight="Bold" Text="С возвращением!" FontFamily="/Fonts/#Finlandica"/>
 
                 <TextBlock FontSize="17" FontWeight="SemiBold" HorizontalAlignment="Center"
-                                   Text="Войдите в систему учёта оборудования"/>
+                                   Text="Войдите в систему учёта оборудования" FontFamily="/Fonts/#Finlandica"/>
 
                 <TextBox Margin="0 50 0 0" x:Name="txtUsername" Width="300" FontSize="18"
-                         materialDesign:HintAssist.Hint="Введите логин" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+                         materialDesign:HintAssist.Hint="Введите логин" FontFamily="/Fonts/#Finlandica" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
                 <PasswordBox x:Name="txtPassword" Width="300" FontSize="18"
-                                     materialDesign:HintAssist.Hint="Введите пароль" BorderThickness="2"
+                                     materialDesign:HintAssist.Hint="Введите пароль" FontFamily="/Fonts/#Finlandica" BorderThickness="2"
                                      BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedPasswordBox}"/>
-                <CheckBox x:Name="Check" Content="Показать пароль" Click="Check_Click" BorderBrush="Black" RenderTransformOrigin="0.297,0.488" Width="135" Height="23">
+                <CheckBox x:Name="Check" Content="Показать пароль" Click="Check_Click" FontFamily="/Fonts/#Finlandica" BorderBrush="Black" RenderTransformOrigin="0.297,0.488" Width="135" Height="23">
                     <CheckBox.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -64,9 +64,9 @@
 
                 <Button Margin="0 20 0 0" x:Name="loginBtn" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0"
                         Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10"
-                        FontSize="18" Content="Войти в систему" Click="loginBtn_Click"/>
-                <Button x:Name="signupBtn" Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Создать аккаунт" Click="signupBtn_Click" Height="50" RenderTransformOrigin="0.509,0.538"/>
-                <Button x:Name="closeBtn" Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Выйти" RenderTransformOrigin="0.582,-0.806" Click="closeBtn_Click" Height="50" Foreground="#FFF32121" />
+                        FontSize="18" Content="Войти в систему" FontFamily="/Fonts/#Finlandica" Click="loginBtn_Click"/>
+                <Button x:Name="signupBtn" FontFamily="/Fonts/#Finlandica" Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Создать аккаунт" Click="signupBtn_Click" Height="50" RenderTransformOrigin="0.509,0.538"/>
+                <Button x:Name="closeBtn" FontFamily="/Fonts/#Finlandica" Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Выйти" RenderTransformOrigin="0.582,-0.806" Click="closeBtn_Click" Height="50" Foreground="#FFF32121" />
 
             </StackPanel>
         </materialDesign:DialogHost>
