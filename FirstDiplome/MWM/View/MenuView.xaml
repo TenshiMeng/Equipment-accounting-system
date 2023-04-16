@@ -49,7 +49,7 @@
                                    FontFamily="/Fonts/#Finlandica"/>
 
                     </StackPanel>
-
+<!--0-->
                     <Image Width="234"
                            Height="239"
                            Source="/Images/man.png"
