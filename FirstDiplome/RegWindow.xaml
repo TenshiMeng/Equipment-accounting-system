@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         xmlns:uc="clr-namespace:FirstDiplome.UserControls"
-        mc:Ignorable="d" Height="650" Width="1000" Background="Transparent" WindowStyle="None"
+
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" Height="650" Width="715" Background="Transparent" WindowStyle="None"
         WindowStartupLocation="CenterScreen" AllowsTransparency="True">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -18,8 +20,8 @@
         <Border Background="#ffd500" Padding="30" CornerRadius="25 0 0 25">
             <StackPanel VerticalAlignment="Center">
                 <Image Source="/Images/registerimg.png" Width="160" Height="160" Margin="0 0 0 40"/>
-                <TextBlock Text="Let's get you sey up" TextAlignment="Center" FontWeight="SemiBold" FontSize="28" Foreground="#363636" FontFamily="/Fonts/#Finlandica"/>
-                <TextBlock TextWrapping="Wrap" FontSize="16" TextAlignment="Center" Foreground="#363636" Margin="0 20 0 20" Text="it should only take a couple of minutes to pair with foy watch"/>
+                <TextBlock Text="Здравствуйте!" TextAlignment="Center" FontWeight="SemiBold" FontSize="28" Foreground="#363636" FontFamily="/Fonts/#Finlandica"/>
+                <TextBlock TextWrapping="Wrap" FontSize="16" TextAlignment="Center" Foreground="#363636" Margin="0 20 0 20" Text="Введите свои регистрационные данные"/>
                 <!---->
                 <Button Style="{StaticResource buttonBlack}">
                     <fa:ImageAwesome Icon="AngleRight" Width="30" Height="12" Foreground="#ffd500"/>
@@ -29,10 +31,9 @@
         <!-- Секция ввода-->
         <Border Padding="20" Background="#ffffff" CornerRadius=" 0 25 25 0" MouseDown="Border_MouseDown" Grid.Column="1">
             <Grid>
-                <Image Source="/Images/close.png" Width="25" Margin="0 4 5 0" Style="{StaticResource iconApp}"/>
-                <Image Source="/Images/minimalize.png" Width="20" Margin="0 7 40 0" Style="{StaticResource iconApp}"/>
-
-                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 10 0 0">
+                <Button x:Name="signupBtnRegWindow" FontFamily="/Fonts/#Finlandica" Style="{StaticResource MaterialDesignFlatButton}"  materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Зарегестрировать" Click="signupBtnRegWindow_Click" Height="50" RenderTransformOrigin="0.509,0.538" Margin="148,561,0,-1"/>
+                <Button x:Name="closeBtnRegWindow" FontFamily="/Fonts/#Finlandica" Style="{StaticResource MaterialDesignFlatButton}"  materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Выйти" RenderTransformOrigin="0.582,-0.806" Click="closeBtnRegWindow_Click" Height="50" Foreground="#FFF32121" Margin="0,561,188,-1" />
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="316" Width="530">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="150"/>
                         <ColumnDefinition Width="*"/>
@@ -49,37 +50,7 @@
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
                     <!--Здесь прописываю текстблоки -->
-                    <TextBlock
-                    VerticalAlignment="Top" Text="Номер телефона" Style="{StaticResource text}" Margin="106,-132,24,0" Grid.ColumnSpan="2"/>
-
-                    <uc:MyTextBox Grid.Column="1" Grid.Row="0" Hint="ЫВфвфыв"/>
-                    <uc:MyTextBox Grid.Column="1" Grid.Row="1" Hint="ЫВфвфfыв"/>
-                    <uc:MyTextBox Grid.Column="1" Hint="ЫВфвфыdв" Margin="155,-31,-155,3" Grid.RowSpan="3"/>
-                    <uc:MyTextBox Grid.Column="1" Grid.Row="4" Hint="ЫВфвфыв" Margin="10,0,0,19" Grid.RowSpan="2"/>
-                    <uc:MyTextBox Grid.Column="1" Grid.Row="5" Hint="ЫВфвфdыв"/>
-
-                    <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2" Margin="0 10"/>
-
-                    <Grid Grid.Column="1" Grid.Row="7" Margin="0 40 0 0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="73*"/>
-                            <ColumnDefinition Width="58*"/>
-                            <ColumnDefinition Width="88*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Button Content="Отменить" Margin="0,144,0,-174" Style="{StaticResource buttonMain}" Grid.Column="2" HorizontalAlignment="Left" Width="50"/>
-                        <Button Content="Сохранить" Margin="68,144,-81,-174" Style="{StaticResource buttonMainGreen}" Grid.Column="2"/>
-                    </Grid>
-                    <TextBlock Grid.Row="1" Text="Логин" Style="{StaticResource text}" Margin="-208,-190,211,0" VerticalAlignment="Top" Height="40"/>
                 </Grid>
-                <TextBlock Grid.Row="0" Text="ФИО" Style="{StaticResource text}" Height="52" Margin="0,1,460,0" VerticalAlignment="Top"/>
-                <TextBlock
-                    VerticalAlignment="Top" Text="Номер телефона" Style="{StaticResource text}" Margin="1,320,455,0"/>
-                <TextBlock Text="Пароль" Style="{StaticResource text}" Margin="0,160,460,0" Height="48" VerticalAlignment="Top"/>
-                <TextBlock Text="Дата рождения" Style="{StaticResource text}" Margin="0,241,455,0" VerticalAlignment="Top" Height="40"/>
-                <TextBlock Text="Электронная почта" Style="{StaticResource text}" Margin="0,398,448,0" VerticalAlignment="Top"/>
-                <TextBlock Text="Пол" Style="{StaticResource text}" Margin="0,480,553,0" VerticalAlignment="Top"/>
-                <TextBlock Text="Номер телефона" Style="{StaticResource text}" Grid.ColumnSpan="2" Margin="106,-132,24,0" VerticalAlignment="Top"/>
             </Grid>
         </Border>
     </Grid>

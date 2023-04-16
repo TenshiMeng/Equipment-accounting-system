@@ -31,5 +31,17 @@ namespace FirstDiplome
                 this.DragMove();
             }
         }
+
+        private void signupBtnRegWindow_Click(object sender, RoutedEventArgs e)
+        {
+            WindowLogin windowLogin = new WindowLogin();
+            //this.Close();
+            windowLogin.Show();
+        }
+
+        private void closeBtnRegWindow_Click(object sender, RoutedEventArgs e)
+        {
+            //this.Close();
+        }
     }
 }
