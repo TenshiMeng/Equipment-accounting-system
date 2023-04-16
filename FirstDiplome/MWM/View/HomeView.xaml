@@ -129,11 +129,11 @@
                         CornerRadius="10"
                         Margin="0">
                     <Grid>
-                        <Image Width="96"
+                        <!--<Image Width="96"
                            Height="129"
                            Source="/Images/suppliers.png"
                            HorizontalAlignment="Right"
-                           VerticalAlignment="Bottom" RenderTransformOrigin="0.507,0.77" Margin="0,0,0,-13"/>
+                           VerticalAlignment="Bottom" RenderTransformOrigin="0.507,0.77" Margin="0,0,0,-13"/>-->
                         <TextBlock Text="Поставки"
                         Foreground="White"
                         FontSize="28"
@@ -152,11 +152,11 @@
                         Background="#FF347BED"
                         CornerRadius="10">
                     <Grid>
-                        <Image Width="150"
+                        <!--<Image Width="150"
                            Height="107"
                            Source="/Images/repairs.png"
                            HorizontalAlignment="Left"
-                           VerticalAlignment="Top" RenderTransformOrigin="0.507,0.77" Margin="20,55,0,0"/>
+                           VerticalAlignment="Top" RenderTransformOrigin="0.507,0.77" Margin="20,55,0,0"/>-->
                         <TextBlock Text="Ремонт"
                         Foreground="White"
                         FontSize="28"
@@ -176,11 +176,11 @@
                         Background="#4eff91"
                         CornerRadius="10">
                     <Grid>
-                        <Image Width="141"
+                        <!--<Image Width="141"
                            Height="120"
                            Source="/Images/cabinet.png"
                            HorizontalAlignment="Left"
-                           VerticalAlignment="Top" RenderTransformOrigin="0.507,0.77" Margin="30,65,0,0"/>
+                           VerticalAlignment="Top" RenderTransformOrigin="0.507,0.77" Margin="30,65,0,0"/>-->
                         <TextBlock Text="Кабинеты"
                         Foreground="White"
                         FontSize="28"
@@ -191,7 +191,7 @@
                                    Foreground="DarkSlateGray"
                                    FontSize="18"
                                    Margin="20,50,-49,70"/>
-                        <Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="150" Width="150" Opacity="0"/>
+                        <Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="150" Width="150" Opacity="0" Click="Button_Click_1"/>
                     </Grid>
                 </Border>
 

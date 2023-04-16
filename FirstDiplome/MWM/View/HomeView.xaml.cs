@@ -50,5 +50,10 @@ namespace FirstDiplome.MWM.View
         {
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
