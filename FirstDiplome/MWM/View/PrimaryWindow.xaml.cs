@@ -12,9 +12,10 @@ using System.Windows.Media;
     public partial class PrimaryWindow : Window
     {
         private LebedevEnd1Entities _context = new LebedevEnd1Entities();
+        private Technic _technic;
         private int _currentPage = 1;
         private int _maxPage = 0;
-
+        
         public PrimaryWindow()
         {
             InitializeComponent();

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using FirstDiplome.Properties;
+using FirstDiplome.View;
 using MaterialDesignThemes.Wpf;
 
 namespace FirstDiplome
@@ -49,7 +50,9 @@ namespace FirstDiplome
 
         private void exitApp(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            //Application.Current.Shutdown();
+            PrimaryWindow primaryWindow = new PrimaryWindow();
+            primaryWindow.Show();
         }
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
@@ -74,14 +77,16 @@ namespace FirstDiplome
 
         private void closeBtn_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            PrimaryWindow primaryWindow = new PrimaryWindow();
+            //this.Close();
+            primaryWindow.ShowDialog();
         }
 
         private void signupBtn_Click(object sender, RoutedEventArgs e)
         {
-            RegWindow regWindow = new RegWindow();
+            PrimaryWindow primaryWindow = new PrimaryWindow();
             //this.Close();
-            regWindow.ShowDialog();
+            primaryWindow.ShowDialog();
         }
 
 
