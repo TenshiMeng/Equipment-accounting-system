@@ -50,9 +50,7 @@ namespace FirstDiplome
 
         private void exitApp(object sender, RoutedEventArgs e)
         {
-            //Application.Current.Shutdown();
-            PrimaryWindow primaryWindow = new PrimaryWindow();
-            primaryWindow.Show();
+            Application.Current.Shutdown();
         }
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
@@ -77,16 +75,14 @@ namespace FirstDiplome
 
         private void closeBtn_Click(object sender, RoutedEventArgs e)
         {
-            PrimaryWindow primaryWindow = new PrimaryWindow();
-            //this.Close();
-            primaryWindow.ShowDialog();
+            exitApp(sender, e);
         }
 
         private void signupBtn_Click(object sender, RoutedEventArgs e)
         {
-            PrimaryWindow primaryWindow = new PrimaryWindow();
+            RegWindow regWindow = new RegWindow();
             //this.Close();
-            primaryWindow.ShowDialog();
+            regWindow.Show();
         }
 
 

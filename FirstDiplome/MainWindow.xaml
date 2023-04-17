@@ -6,18 +6,16 @@
         xmlns:local="clr-namespace:FirstDiplome"
         xmlns:viewModel="clr-namespace:FirstDiplome.MWM.ViewModel"
         mc:Ignorable="d" 
-        Height="680" Width="920"
-        WindowStyle="None"
-        ResizeMode="NoResize"
+        Height="736" Width="1602"
+        WindowStyle="None"        
         Background="Transparent"
-        AllowsTransparency="False">
+        AllowsTransparency="True">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
-    <Border Background="#272537"
-            CornerRadius="20">
+    <Border Background="#363639"  CornerRadius="30">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>

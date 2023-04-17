@@ -197,7 +197,7 @@
                     <!--Стиль кнопок меню-->
                     <Style x:Key="menuButton" TargetType="Button">
                         <Setter Property="Background" Value="Transparent"/>
-                        <Setter Property="Foreground" Value="#d0c0ff"/>
+                        <Setter Property="Foreground" Value="#363636"/>
                         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
                         <Setter Property="Height" Value="35"/>
                         <Setter Property="Margin" Value="15 3"/>
@@ -214,7 +214,7 @@
 
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#7b5cd6"/>
+                                <Setter Property="Background" Value="#363640"/>
                                 <Setter Property="Foreground" Value="#ffffff"/>
                             </Trigger>
                         </Style.Triggers>
