@@ -5,7 +5,7 @@
         Loaded="Window_Loaded"
         xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" mc:Ignorable="av" x:Class="FirstDiplome.View.PrimaryWindow" 
 
-        Height="720" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Height="Auto" Width="1278" WindowStartupLocation="CenterScreen" WindowStyle="None"
         AllowsTransparency="True" Background="Transparent">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVis"/>
@@ -151,19 +151,19 @@
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <DataGrid Name="TehnicGrid" Grid.Row="5" AutoGenerateColumns="False">
+                <DataGrid Name="TehnicGrid" Grid.Row="4" AutoGenerateColumns="False" Margin="0,36,-198,50" Grid.RowSpan="3">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Код" IsReadOnly="True" Width="55" Binding="{Binding CodeEquipment}"/>
                         <DataGridTextColumn Header="Дата покупки" IsReadOnly="True" Width="*" Binding="{Binding DateBuy, StringFormat='yyyy-MM-dd'}"/>
-                        <DataGridTextColumn Header="Поставщик" IsReadOnly="True" Width="*" Binding="{Binding Suppliers}"/>
-                        <DataGridTextColumn Header="Состояние" IsReadOnly="True" Width="*" Binding="{Binding Description }"/>
+                        <DataGridTextColumn Header="Поставщик" IsReadOnly="True" Width="*" Binding="{Binding Supplier.NameSupplier}"/>
+                        <DataGridTextColumn Header="Описание" IsReadOnly="True" Width="*" Binding="{Binding Description }"/>
                         <DataGridTextColumn Header="Тип" IsReadOnly="True" Width="*" Binding="{Binding Equipment }"/>
                         <DataGridTextColumn Header="Фото" IsReadOnly="True" Width="*" Binding="{Binding Image }"/>
-                        <DataGridTextColumn Header="Наличие" IsReadOnly="True" Width="*" Binding="{Binding Availability }"/>
+                        <DataGridTextColumn Header="Наличие" IsReadOnly="True" Width="*" Binding="{Binding TypesAvailability.TypeAvailability }"/>
                         <DataGridTextColumn Header="Ремонт" IsReadOnly="True" Width="*" Binding="{Binding Repairs }"/>
-                        <DataGridTextColumn Header="Состояние" IsReadOnly="True" Width="*" Binding="{Binding Condition }"/>
-                        <DataGridTextColumn Header="Сотрудник" IsReadOnly="True" Width="*" Binding="{Binding Employeers }"/>
-                        <DataGridTextColumn Header="Кабинет" IsReadOnly="True" Width="*" Binding="{Binding Location }"/>
+                        <DataGridTextColumn Header="Состояние" IsReadOnly="True" Width="*" Binding="{Binding TypesConditions.TypeConditions }"/>
+                        <DataGridTextColumn Header="Сотрудник" IsReadOnly="True" Width="*" Binding="{Binding Employee.FullName }"/>
+                        <DataGridTextColumn Header="Кабинет" IsReadOnly="True" Width="*" Binding="{Binding TypesLocate.Placement }"/>
                     </DataGrid.Columns>
 
                 </DataGrid>
