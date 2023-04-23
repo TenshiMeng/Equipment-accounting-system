@@ -23,8 +23,30 @@ namespace FirstDiplome
         public MainWindow()
         {
             InitializeComponent();
+            TheControl.SetIntials(this);
         }
 
+            private void exit_Click(object sender, RoutedEventArgs e)
+            {
+                TheControl.Exit();
+            }
 
+            private void full_Click(object sender, RoutedEventArgs e)
+            {
+                TheControl.DoFullscreen(this);
+            }
+
+            private void max_Click(object sender, RoutedEventArgs e)
+            {
+                Button btn = (Button)sender;
+                TheControl.DoMaximize(this, btn);
+            }
+
+            private void min_Click(object sender, RoutedEventArgs e)
+            {
+                TheControl.Minimize(this);
+            }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e) => DragMove();
     }
 }

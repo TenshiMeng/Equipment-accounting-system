@@ -220,6 +220,7 @@
     <Compile Include="Technic.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="TheControl.cs" />
     <Compile Include="TypesAvailability.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -367,11 +368,10 @@
     <Resource Include="Images\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\close.png" />
-    <Resource Include="Images\minimalize.png" />
     <Resource Include="Images\registerimg.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\close.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

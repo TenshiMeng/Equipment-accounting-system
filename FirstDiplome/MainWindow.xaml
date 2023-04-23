@@ -6,28 +6,30 @@
         xmlns:local="clr-namespace:FirstDiplome"
         xmlns:viewModel="clr-namespace:FirstDiplome.MWM.ViewModel"
         mc:Ignorable="d" 
-        Height="736" Width="1602"
+        Height="1819" Width="1602"
         WindowStyle="None"        
         Background="Transparent"
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
-    <Border Background="#363639"  CornerRadius="30">
+    <Border Background="#35353b"  CornerRadius="30">
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="75"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
 
-            <TextBlock Text="Система учёта"
+                <TextBlock Text="Система учёта"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Left"
                    Foreground="White"
@@ -35,29 +37,29 @@
                    Margin="20,0,0,0"
                    FontFamily="/Fonts/#Finlandica"/>
 
-            <StackPanel Grid.Row="1">
+                <StackPanel Grid.Row="1">
 
-                <RadioButton Content="Авторизация"
+                    <RadioButton Content="Авторизация"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
                              Command="{Binding HomeViewCommand}"/>
-                <RadioButton Content="Сотрудники"
+                    <RadioButton Content="Сотрудники"
                     Height="50"
                     Foreground="White"
                     FontSize="14"
                     Style="{StaticResource MenuButtonTheme}"
                     Command="{Binding MenuViewCommand}"/>
-                <RadioButton Content="Учёт"
+                    <RadioButton Content="Учёт"
                     Height="50"
                     Foreground="White"
                     FontSize="14"
                     Style="{StaticResource MenuButtonTheme}"/>
-            </StackPanel>
+                </StackPanel>
 
-            <TextBox Width="250"
+                <TextBox Width="250"
                      Height="40"
                      VerticalContentAlignment="Center"
                      HorizontalAlignment="Left"
@@ -65,15 +67,21 @@
                      Grid.Column="1"
                      Style="{StaticResource ModernTextbox}"/>
 
-            <ContentControl Grid.Row="1"
+                <ContentControl Grid.Row="1"
                             Grid.Column="1"
                             Margin="10,10,10,10"
                             Content="{Binding CurrentView}"
                             FontFamily="/Fonts/#Finlandica"/>
+            </Grid>
+            <Canvas>
+                <Button x:Name="exit" Click="exit_Click" Height="26" Width="52" FontSize="18px" Foreground="White" Canvas.Left="1528" Canvas.Top="19" Style ="{StaticResource FunctionalButton}" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image Source="/Images/Close.png" RenderTransformOrigin="0.523,0.492" Height="20" Width="16"/>
+                </Button>
+                <Button x:Name="max" Click="max_Click" Height="26" Width="52" FontSize="18px" Foreground="White" Canvas.Left="1476" Canvas.Top="19" Style ="{StaticResource FunctionalButton}" FontFamily="webdings" HorizontalAlignment="Left" VerticalAlignment="Center">1</Button>
+                <Button x:Name="min" Click="min_Click" Height="26" Width="52" FontSize="18px" Foreground="White" VerticalAlignment="Top" Canvas.Left="1424" Canvas.Top="19" Style ="{StaticResource FunctionalButton}" HorizontalAlignment="Left">—</Button>
+            </Canvas>
+
         </Grid>
-
-        
-
     </Border>
-    
+
 </Window>
