@@ -24,7 +24,7 @@
             </DataTemplate>
                 <!--Кнопка для WindowRegistration-->
             <Style x:Key="buttonBlack" TargetType="Button">
-                <Setter Property="Background" Value="#363636"/>
+                <Setter Property="Background" Value="#5c5b5b"/>
                 <Setter Property="BorderThickness" Value="0"/>
                 <Setter Property="Width" Value="60"/>
                 <Setter Property="Height" Value="60"/>
@@ -75,7 +75,7 @@
             </Style>
                 <!-- TextBlocks for RegWindow-->
             <Style x:Key="text" TargetType="TextBlock">
-                <Setter Property="Foreground" Value="#363636"/>
+                <Setter Property="Foreground" Value="#5c5b5b"/>
                 <Setter Property="FontWeight" Value="SemiBold"/>
                 <Setter Property="FontSize" Value="16"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
@@ -83,7 +83,7 @@
                 <!--TextBox to RegWindow-->
             <Style TargetType="TextBox">
                 <Setter Property="Background" Value="#f5f7f9"/>
-                <Setter Property="Foreground" Value="#767676"/>
+                <Setter Property="Foreground" Value="#5c5b5b"/>
                 <Setter Property="BorderThickness" Value="1"/>
                 <Setter Property="BorderBrush" Value="#f5f7f9"/>
                 <Setter Property="FontSize" Value="12"/>
@@ -126,7 +126,7 @@
 
                 <Style.Triggers>
                     <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="#363636"/>
+                        <Setter Property="Background" Value="#5c5b5b"/>
                     </Trigger>
                     <Trigger Property="IsMouseCaptured" Value="True">
                         <Setter Property="Background" Value="#161616"/>
@@ -136,7 +136,7 @@
             <!---->
             <Style x:Key="buttonMain" TargetType="Button">
                 <Setter Property="Background" Value="#f5f7f9"/>
-                <Setter Property="Foreground" Value="#363636"/>
+                <Setter Property="Foreground" Value="#5c5b5b"/>
                 <Setter Property="Width" Value="50"/>
                 <Setter Property="FontSize" Value="16"/>
                 <Setter Property="FontWeight" Value="SemiBold"/>
@@ -172,7 +172,7 @@
                     <!--Стиль верхней кнопки меню-->
                     <Style x:Key="topButton" TargetType="Button">
                         <Setter Property="Background" Value="Transparent"/>
-                        <Setter Property="Foreground" Value="#6e7783"/>
+                <Setter Property="Foreground" Value="#5c5b5b"/>
                         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
                         <Setter Property="Width" Value="30"/>
                         <Setter Property="Height" Value="30"/>
@@ -197,7 +197,7 @@
                     <!--Стиль кнопок меню-->
                     <Style x:Key="menuButton" TargetType="Button">
                         <Setter Property="Background" Value="Transparent"/>
-                        <Setter Property="Foreground" Value="#363636"/>
+                <Setter Property="Foreground" Value="#35353b"/>
                         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
                         <Setter Property="Height" Value="35"/>
                         <Setter Property="Margin" Value="15 3"/>
@@ -214,7 +214,7 @@
 
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#363640"/>
+                        <Setter Property="Background" Value="#35353b"/>
                                 <Setter Property="Foreground" Value="#ffffff"/>
                             </Trigger>
                         </Style.Triggers>
@@ -292,7 +292,7 @@
                     <!--Стиль кнопок вкладки-->
                     <Style x:Key="tabButton" TargetType="Button">
                         <Setter Property="Background" Value="Transparent"/>
-                        <Setter Property="Foreground" Value="#121518"/>
+                <Setter Property="Foreground" Value="#5c5b5b"/>
                         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
                         <Setter Property="Width" Value="100"/>
                         <Setter Property="Height" Value="45"/>
@@ -311,7 +311,7 @@
 
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="BorderBrush" Value="#363640"/>
+                        <Setter Property="BorderBrush" Value="#5c5b5b"/>
                             </Trigger>
                         </Style.Triggers>
                     </Style>
@@ -347,7 +347,7 @@
                     <!--Стиль кнопки нумерации1-->
                     <Style x:Key="pagingButton1" TargetType="Button">
                         <Setter Property="Background" Value="Transparent"/>
-                        <Setter Property="Foreground" Value="#6c7682"/>
+                <Setter Property="Foreground" Value="#5c5b5b"/>
                         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
                         <Setter Property="FontSize" Value="13"/>
                         <Setter Property="Margin" Value="1 0"/>
@@ -367,7 +367,7 @@
                                 <Setter Property="Foreground" Value="#ffffff"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="#363640"/>
+                        <Setter Property="Background" Value="#5c5b5b"/>
                                 <Setter Property="Foreground" Value="#ffffff"/>
                             </Trigger>
                         </Style.Triggers>
@@ -376,7 +376,7 @@
                     <!--Стиль кнопки нумерации2-->
                     <Style x:Key="pagingButton2" TargetType="Button">
                         <Setter Property="Background" Value="Transparent"/>
-                        <Setter Property="Foreground" Value="#6c7682"/>
+                <Setter Property="Foreground" Value="#5c5b5b"/>
                         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
                         <Setter Property="FontSize" Value="13"/>
                         <Setter Property="Margin" Value="1 0"/>
@@ -401,7 +401,7 @@
                     <!--Стиль кнопки нумерации3-->
                     <Style x:Key="pagingButton3" TargetType="Button">
                         <Setter Property="Background" Value="Transparent"/>
-                        <Setter Property="Foreground" Value="#6c7682"/>
+                <Setter Property="Foreground" Value="#5c5b5b"/>
                         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
                         <Setter Property="FontSize" Value="13"/>
                         <Setter Property="Margin" Value="1 0"/>
@@ -421,7 +421,7 @@
                                 <Setter Property="Foreground" Value="#ffffff"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="#363640"/>
+                        <Setter Property="Background" Value="#5c5b5b"/>
                                 <Setter Property="Foreground" Value="#ffffff"/>
                             </Trigger>
                         </Style.Triggers>
@@ -453,7 +453,7 @@
 
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="#363636"/>
+                        <Setter Property="Background" Value="#5c5b5b"/>
                             </Trigger>
                         </Style.Triggers>
                     </Style>
@@ -504,7 +504,7 @@
                     </Style>
                     <Style x:Key="DataGridStyle1" TargetType="{x:Type DataGrid}">
                         <Setter Property="Background" Value="Transparent"/>
-                        <Setter Property="Foreground" Value="#222528"/>
+                <Setter Property="Foreground" Value="#5c5b5b"/>
                         <Setter Property="BorderThickness" Value="0"/>
                         <Setter Property="RowDetailsVisibilityMode" Value="VisibleWhenSelected"/>
                         <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
@@ -600,7 +600,7 @@
                     <Style x:Key="DataGridColumnHeaderStyle1" TargetType="{x:Type DataGridColumnHeader}">
                         <Setter Property="VerticalContentAlignment" Value="Center"/>
                         <Setter Property="Background" Value="Transparent"/>
-                        <Setter Property="Foreground" Value="#69717d"/>
+                <Setter Property="Foreground" Value="#5c5b5b"/>
                         <Setter Property="Margin" Value="15 0 15 10"/>
                         <Setter Property="Template">
                             <Setter.Value>
@@ -678,10 +678,10 @@
                     <SolidColorBrush x:Key="OptionMark.Static.Border" Color="#FF707070"/>
                     <SolidColorBrush x:Key="OptionMark.Static.Glyph" Color="#FF212121"/>
                     <SolidColorBrush x:Key="OptionMark.MouseOver.Background" Color="#FFF3F9FF"/>
-                    <SolidColorBrush x:Key="OptionMark.MouseOver.Border" Color="#FF5593FF"/>
+            <SolidColorBrush x:Key="OptionMark.MouseOver.Border" Color="#5c5b5b"/>
                     <SolidColorBrush x:Key="OptionMark.MouseOver.Glyph" Color="#FF212121"/>
                     <SolidColorBrush x:Key="OptionMark.Pressed.Background" Color="#FFD9ECFF"/>
-                    <SolidColorBrush x:Key="OptionMark.Pressed.Border" Color="#FF3C77DD"/>
+            <SolidColorBrush x:Key="OptionMark.Pressed.Border" Color="#5c5b5b"/>
                     <SolidColorBrush x:Key="OptionMark.Pressed.Glyph" Color="#FF212121"/>
                     <SolidColorBrush x:Key="OptionMark.Disabled.Background" Color="#FFE6E6E6"/>
                     <SolidColorBrush x:Key="OptionMark.Disabled.Border" Color="#FFBCBCBC"/>
@@ -689,7 +689,7 @@
                     <Style x:Key="CheckBoxStyle1" TargetType="{x:Type CheckBox}">
                         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
                         <Setter Property="Background" Value="{StaticResource OptionMark.Static.Background}"/>
-                        <Setter Property="BorderBrush" Value="#dae2ea"/>
+                <Setter Property="BorderBrush" Value="#5c5b5b"/>
                         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
                         <Setter Property="BorderThickness" Value="1"/>
                         <Setter Property="Template">
@@ -745,6 +745,25 @@
                         </Setter>
                     </Style>
                     <!--#endregion-->
+            <!--Окна функций-->
+            <Style x:Key="FunctionalButton" TargetType="Button">
+                <Setter Property="Background" Value="#35353b"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Width" Value="40"/>
+                <Setter Property="Height" Value="40"/>
+
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#35353b"/>
+                    </Trigger>
+                    <Trigger Property="IsMouseCaptured" Value="True">
+                        <Setter Property="Background" Value="#5c5b5b"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <!---->
+
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -12,7 +12,7 @@
         <BooleanToVisibilityConverter x:Key="BoolToVis"/>
     </UserControl.Resources>
 
-    <StackPanel Margin="0,0,10,-94">
+    <StackPanel Margin="0,0,10,104" Height="NaN" Width="NaN">
         <TextBlock Text="Система учёта оборудования МОУ 'Лицей №5' "
                    Foreground="White"
                    FontSize="28"
@@ -127,7 +127,7 @@
                         <Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="150" Width="150" Opacity="0"/>
                     </Grid>
                 </Border>
-                <Border Width="411"
+                <Border Width="401"
                     Height="200">
 
                     <Border.Background>
@@ -176,18 +176,18 @@
                                 </TransformGroup>
                             </Image.RenderTransform>
                         </Image>
-                        <Button x:Name="ButtonTehnicue" Content="" Opacity="0" Click="ButtonTehnicue_Click"/>
+                        <Button x:Name="ButtonTehnicue" Content="" Opacity="0" Click="ButtonTehnicue_Click" HorizontalAlignment="Left"/>
                     </Grid>
                 </Border>
                 <StackPanel Orientation="Horizontal"
                     Width="256" Height="204">
                     <Grid>
                         <StackPanel>
-                            <StackPanel>
-                                <Border Width="200"
+                            <StackPanel Width="259" HorizontalAlignment="Left">
+                                <Border Width="228"
                                     Height="200"
                                     CornerRadius="10"
-                                    Margin="45,0,0,0">
+>
                                     <Border.Background>
                                         <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
                                             <GradientStop Color="#8d297f" Offset="0.0"/>
@@ -197,7 +197,7 @@
                                     <TextBlock Text="Кадровый&#xA;учёт"
                                         Foreground="White"
                                         FontSize="28"
-                                        Margin="20,10,-35,115"/>
+                                        Margin="20,10,0,115" Width="NaN"/>
                                 </Border>
                             </StackPanel>
                         </StackPanel>
@@ -209,7 +209,7 @@
                             Height="182"
                             Source="/Images/teamworkone.png"
                             HorizontalAlignment="Right"
-                            VerticalAlignment="Bottom" RenderTransformOrigin="0.507,0.77" Margin="0,0,5,0">
+                            VerticalAlignment="Bottom" RenderTransformOrigin="0.507,0.77" Margin="0,0,26,0">
                             <Image.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -219,12 +219,12 @@
                                 </TransformGroup>
                             </Image.RenderTransform>
                         </Image>
-                        <Button x:Name="ButtonEmployees" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Height="200" Width="225" Opacity="0" Click="ButtonEmployees_Click"/>
+                        <Button x:Name="ButtonEmployees" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Height="200" Width="161" Opacity="0" Click="ButtonEmployees_Click"/>
                     </Grid>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
-        <Border Background="#eff2f7" CornerRadius="30" Height="567" Width="1322">
+        <Border Background="#eff2f7" CornerRadius="30" Height="567" Width="1295">
             <Grid HorizontalAlignment="Left" Width="1070" Margin="10,0,0,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="23*"/>
