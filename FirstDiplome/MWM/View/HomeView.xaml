@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:FirstDiplome.MWM.View"
              Loaded="Window_Loaded"
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="FirstDiplome.MWM.View.HomeView"
-             mc:Ignorable="d" Width="1420" Height="795">
+             mc:Ignorable="d" Width="1420" Height="993">
 
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVis"/>
@@ -190,8 +190,8 @@
                                     Margin="45,0,0,0">
                                     <Border.Background>
                                         <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                                            <GradientStop Color="#ffc554" Offset="0.0"/> 
-                                            <GradientStop Color="#ffb73a" Offset="1"/>
+                                            <GradientStop Color="#8d297f" Offset="0.0"/>
+                                            <GradientStop Color="#8d7099" Offset="1"/>
                                         </LinearGradientBrush>
                                     </Border.Background>
                                     <TextBlock Text="Кадровый&#xA;учёт"

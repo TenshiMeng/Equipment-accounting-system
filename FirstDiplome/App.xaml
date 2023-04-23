@@ -231,7 +231,7 @@
                     <!--Стиль поиска-->
                     <Style x:Key="textboxSearch" TargetType="TextBox">
                         <Setter Property="Background" Value="#ffffff"/>
-                        <Setter Property="Foreground" Value="#b0b9c6"/>
+                <Setter Property="Foreground" Value="#5c5b5b"/>
                         <Setter Property="BorderThickness" Value="0"/>
                         <Setter Property="FontSize" Value="12"/>
                         <Setter Property="Padding" Value="15 10"/>
@@ -651,12 +651,12 @@
                         </Setter>
                         <Style.Triggers>
                             <Trigger Property="IsMouseDirectlyOver" Value="True">
-                                <Setter Property="Background" Value="#623ed0"/>
+                        <Setter Property="Background" Value="#5c5b5b"/>
                                 <Setter Property="Foreground" Value="#ffffff"/>
                             </Trigger>
 
                             <Trigger Property="IsSelected" Value="True">
-                                <Setter Property="Background" Value="#623ed0"/>
+                        <Setter Property="Background" Value="#5c5b5b"/>
                                 <Setter Property="Foreground" Value="#ffffff"/>
                             </Trigger>
 
@@ -715,7 +715,7 @@
                                         </Trigger>
                                         <Trigger Property="IsMouseOver" Value="true">
                                             <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.MouseOver.Background}"/>
-                                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#9575cd"/>
+                                    <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#5c5b5b"/>
                                             <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource OptionMark.MouseOver.Glyph}"/>
                                             <Setter Property="Fill" TargetName="indeterminateMark" Value="{StaticResource OptionMark.MouseOver.Glyph}"/>
                                         </Trigger>
@@ -727,7 +727,7 @@
                                         </Trigger>
                                         <Trigger Property="IsPressed" Value="true">
                                             <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.Pressed.Background}"/>
-                                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#9575cd"/>
+                                    <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#5c5b5b"/>
                                             <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource OptionMark.Pressed.Glyph}"/>
                                             <Setter Property="Fill" TargetName="indeterminateMark" Value="{StaticResource OptionMark.Pressed.Glyph}"/>
                                         </Trigger>
