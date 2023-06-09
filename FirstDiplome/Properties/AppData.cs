@@ -10,7 +10,7 @@ namespace FirstDiplome.Properties
     {
 
 
-        public static LebedevEnd1Entities LebedevEnd1Entities { get; set; }
-        public  static LebedevEnd1Entities lebedevEnd1Entities = new LebedevEnd1Entities();
+        public static LebedevEnd1Entities2 LebedevEnd1Entities2 { get; set; }
+        public  static LebedevEnd1Entities2 lebedevEnd1Entities2 = new LebedevEnd1Entities2();
     }
 }

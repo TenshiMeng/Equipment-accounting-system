@@ -22,7 +22,7 @@ namespace FirstDiplome.MWM.View
     /// </summary>
     public partial class HomeView : UserControl
     {
-        private LebedevEnd1Entities _context = new LebedevEnd1Entities();
+        private LebedevEnd1Entities2 _context = new LebedevEnd1Entities2();
         private int _currentPage = 1;
         private int _maxPage = 0;
         public HomeView()
@@ -38,6 +38,7 @@ namespace FirstDiplome.MWM.View
         private void Close()
         {
             throw new NotImplementedException();
+            this.Close();
         }
 
         private void ButtonTest1_Click(object sender, RoutedEventArgs e)
@@ -61,7 +62,7 @@ namespace FirstDiplome.MWM.View
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            TehnicGrid.ItemsSource = AppData.lebedevEnd1Entities.Technic.ToList();
+            
         }
     }
 }

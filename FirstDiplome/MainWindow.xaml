@@ -16,11 +16,11 @@
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
-    <Border Background="#35353b"  CornerRadius="30">
-        <Grid>
-            <Grid>
+    <Border Background="#35353b"  CornerRadius="30" Margin="0,0,-612,-98" Width="NaN" Height="NaN">
+        <Grid Margin="0,0,-156,56" Width="NaN" Height="NaN">
+            <Grid Margin="0,0,753,46" Width="NaN" Height="NaN">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="19"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
@@ -34,46 +34,48 @@
                    HorizontalAlignment="Left"
                    Foreground="White"
                    FontSize="22"
-                   Margin="20,0,0,0"
-                   FontFamily="/Fonts/#Finlandica"/>
+                   Margin="10,0,0,0"
+                   FontFamily="/Fonts/#Finlandica" Width="144" Grid.Column="1" Height="27"/>
 
-                <StackPanel Grid.Row="1">
-
-                    <RadioButton Content="Авторизация"
-                             Height="50"
-                             Foreground="White"
-                             FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"
-                             IsChecked="True"
-                             Command="{Binding HomeViewCommand}"/>
-                    <RadioButton Content="Сотрудники"
-                    Height="50"
-                    Foreground="White"
-                    FontSize="14"
-                    Style="{StaticResource MenuButtonTheme}"
-                    Command="{Binding MenuViewCommand}"/>
-                    <RadioButton Content="Учёт"
-                    Height="50"
-                    Foreground="White"
-                    FontSize="14"
-                    Style="{StaticResource MenuButtonTheme}"/>
-                </StackPanel>
-
-                <TextBox Width="250"
-                     Height="40"
+                <TextBox Width="211"
                      VerticalContentAlignment="Center"
                      HorizontalAlignment="Left"
-                     Margin="5"
+                     Margin="154,10,0,17"
                      Grid.Column="1"
-                     Style="{StaticResource ModernTextbox}"/>
+                     Style="{StaticResource ModernTextbox}" Height="NaN"/>
 
                 <ContentControl Grid.Row="1"
                             Grid.Column="1"
-                            Margin="10,10,10,10"
+                            Margin="10,10,-593,124"
                             Content="{Binding CurrentView}"
-                            FontFamily="/Fonts/#Finlandica"/>
+                            FontFamily="/Fonts/#Finlandica" Height="NaN" Width="NaN"/>
+                <RadioButton Content="Главная страница"
+                        Height="NaN"
+                        Foreground="White"
+                        FontSize="14"
+                        Style="{StaticResource MenuButtonTheme}"
+                        IsChecked="True"
+                        Command="{Binding HomeViewCommand}" Grid.Column="1" Margin="370,8,1027,17" Width="NaN"/>
+                <RadioButton Content="Техника"
+                        Height="NaN"
+                        Foreground="White"
+                        FontSize="14"
+                        Style="{StaticResource MenuButtonTheme}"
+                        Command="{Binding TechnicViewCommand}" Grid.Column="1" Margin="585,8,834,17" Width="NaN"/>
+                <RadioButton Content="Сотрудники"
+                            Height="NaN"
+                            Foreground="White"
+                            FontSize="14"
+                            Style="{StaticResource MenuButtonTheme}"
+                            Command="{Binding MenuViewCommand}" Grid.Column="1" Margin="778,8,668,17" Width="NaN"/>
+                <RadioButton Content="Поставки"
+                    Height="NaN"
+                    Foreground="White"
+                    FontSize="14"
+                    Style="{StaticResource MenuButtonTheme}"
+                    Command="{Binding SupplierViewCommand}" Grid.Column="1" Margin="944,8,502,17" Width="NaN"/>
             </Grid>
-            <Canvas>
+            <Canvas Margin="0,10,150,-99" Width="NaN" Height="NaN">
                 <Button x:Name="exit" Click="exit_Click" Height="26" Width="52" FontSize="18px" Foreground="White" Canvas.Left="1528" Canvas.Top="19" Style ="{StaticResource FunctionalButton}" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Image Source="/Images/Close.png" RenderTransformOrigin="0.523,0.492" Height="20" Width="16"/>
                 </Button>

@@ -18,13 +18,13 @@ using System.Windows.Shapes;
 namespace FirstDiplome.MWM.View
 {
     /// <summary>
-    /// Логика взаимодействия для MenuView.xaml
+    /// Логика взаимодействия для TechnicView.xaml
     /// </summary>
 
-    public partial class MenuView : UserControl
+    public partial class TechnicView : UserControl
     {
         private LebedevEnd1Entities2 _context = new LebedevEnd1Entities2();
-        public MenuView()
+        public TechnicView()
         {
             InitializeComponent();
         }
@@ -35,7 +35,7 @@ namespace FirstDiplome.MWM.View
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            EmployeeGrid.ItemsSource = AppData.lebedevEnd1Entities2.Employee.ToList();
+            TechnicGrid.ItemsSource = AppData.lebedevEnd1Entities2.Technic.ToList();
         }
     }
 }
