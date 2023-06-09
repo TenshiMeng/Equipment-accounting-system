@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FirstDiplome"
         xmlns:viewModel="clr-namespace:FirstDiplome.MWM.ViewModel"
         mc:Ignorable="d" 
-        Height="1819" Width="1602"
+        Height="1819" Width="1626"
         WindowStyle="None"        
         Background="Transparent"
         AllowsTransparency="True"
@@ -17,10 +17,10 @@
     </Window.DataContext>
 
     <Border Background="#35353b"  CornerRadius="30" Margin="0,0,-612,-98" Width="NaN" Height="NaN">
-        <Grid Margin="0,0,-156,56" Width="NaN" Height="NaN">
-            <Grid Margin="0,0,753,46" Width="NaN" Height="NaN">
+        <Grid Margin="0,0,357,56" Width="NaN" Height="NaN">
+            <Grid Margin="0,0,0,46" Width="1619" Height="NaN" HorizontalAlignment="Left">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="19"/>
+                    <ColumnDefinition Width="0"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
@@ -46,7 +46,7 @@
 
                 <ContentControl Grid.Row="1"
                             Grid.Column="1"
-                            Margin="10,10,-593,124"
+                            Margin="10,10,0,124"
                             Content="{Binding CurrentView}"
                             FontFamily="/Fonts/#Finlandica" Height="NaN" Width="NaN"/>
                 <RadioButton Content="Главная страница"
@@ -75,7 +75,15 @@
                     Style="{StaticResource MenuButtonTheme}"
                     Command="{Binding SupplierViewCommand}" Grid.Column="1" Margin="944,8,502,17" Width="NaN"/>
             </Grid>
-            <Canvas Margin="0,10,150,-99" Width="NaN" Height="NaN">
+            <Canvas Margin="0,11,-364,-100" Width="NaN" Height="NaN" RenderTransformOrigin="0.5,0.5">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="0.077"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="1.499"/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
                 <Button x:Name="exit" Click="exit_Click" Height="26" Width="52" FontSize="18px" Foreground="White" Canvas.Left="1528" Canvas.Top="19" Style ="{StaticResource FunctionalButton}" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Image Source="/Images/Close.png" RenderTransformOrigin="0.523,0.492" Height="20" Width="16"/>
                 </Button>
