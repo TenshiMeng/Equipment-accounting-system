@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              Loaded="Window_Loaded"
              xmlns:local="clr-namespace:FirstDiplome.MWM.View"
-             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="FirstDiplome.MWM.View.MenuView"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="FirstDiplome.MWM.View.SupplierView"
              mc:Ignorable="d" Width="1599" Height="714">
 
     <UserControl.Resources>
@@ -165,7 +165,7 @@
                         </DataGrid.Columns>
                     </DataGrid>
 
-                    <DataGrid x:Name="EmployeeGrid" Grid.Row="4" AutoGenerateColumns="False" Margin="0,50,-321,50" Grid.RowSpan="3" Grid.ColumnSpan="2" Width="NaN" Height="NaN">
+                    <DataGrid x:Name="SupplierGrid" Grid.Row="4" AutoGenerateColumns="False" Margin="0,50,-321,50" Grid.RowSpan="3" Grid.ColumnSpan="2" Width="NaN" Height="NaN">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Код" IsReadOnly="True" Width="55" Binding="{Binding CodeEmployee}"/>
                             <DataGridTextColumn Header="ФИО" IsReadOnly="True" Width="55" Binding="{Binding FullName}"/>

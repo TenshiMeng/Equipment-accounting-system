@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              Loaded="Window_Loaded"
              xmlns:local="clr-namespace:FirstDiplome.MWM.View"
-             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="FirstDiplome.MWM.View.MenuView"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="FirstDiplome.MWM.View.TechnicView"
              mc:Ignorable="d" Width="1599" Height="714">
 
     <UserControl.Resources>
@@ -59,14 +59,14 @@
                     <!--Таблица обучающихся-->
 
                     <!--Заголовок страницы-->
-                    <TextBlock Text="Сотрудники" Grid.Row="2" FontSize="32" FontWeight="SemiBold" Margin="0,20,0,99"
+                    <TextBlock Text="Техника" Grid.Row="2" FontSize="32" FontWeight="SemiBold" Margin="0,20,0,99"
                         HorizontalAlignment="Left" Foreground="#121518" Height="NaN"/>
 
                     <!--Кнопка добавления-->
-                    <Button Style="{StaticResource addButton}" Grid.Column="1" Margin="58,26,10,52" Grid.Row="2" Width="NaN" HorizontalAlignment="Stretch">
+                    <Button Style="{StaticResource addButton}" Grid.Column="1" Margin="58,48,-80,75" Grid.Row="2" Width="NaN" HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal">
 
-                            <TextBlock Text="Добавить нового сотрудника" Width="182" Height="17"/>
+                            <TextBlock Text="Зачислить новую технику на баланс" Width="228" Height="19"/>
                         </StackPanel>
                     </Button>
 
@@ -75,13 +75,13 @@
 
                     <!--Вкладка кнопок-->
                     <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,-168,10" Grid.ColumnSpan="2" Width="NaN">
-                        <Button Content="Работают" Style="{StaticResource tabButton}" BorderBrush="#784ff2"/>
-                        <Button Content="Уволены" Style="{StaticResource tabButton}"/>
+                        <Button Content="На балансе" Style="{StaticResource tabButton}" BorderBrush="#784ff2"/>
+                        <Button Content="Списана" Style="{StaticResource tabButton}"/>
 
                     </StackPanel>
 
                     <!--Заголовок таблицы-->
-                    <TextBlock Text="Работают" Grid.Row="4" FontSize="18" FontWeight="SemiBold"
+                    <TextBlock Text="Техника" Grid.Row="4" FontSize="18" FontWeight="SemiBold"
                         Foreground="#121518" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
                     <TextBlock Text="Фильтровать по" Grid.Row="4" FontSize="13" FontWeight="SemiBold" Margin="696,0,0,0"
@@ -129,21 +129,7 @@
                                 </DataGridCheckBoxColumn.HeaderTemplate>
                             </DataGridCheckBoxColumn>
 
-                            <DataGridTextColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto" Binding="{Binding Id}"/>
-
-                            <DataGridTemplateColumn Header="Обучающийся" IsReadOnly="True" Width="270">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="{Binding BgColor}">
-                                                <TextBlock Text="{Binding Character}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Margin="0 0 0 1"/>
-                                            </Border>
-
-                                            <TextBlock Text="{Binding FullNameStudent}" VerticalAlignment="Center"/>
-                                        </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
+                            
 
 
                             <DataGridTemplateColumn Header="Operations" IsReadOnly="True" Width="auto">
@@ -165,20 +151,17 @@
                         </DataGrid.Columns>
                     </DataGrid>
 
-                    <DataGrid x:Name="EmployeeGrid" Grid.Row="4" AutoGenerateColumns="False" Margin="0,50,-321,50" Grid.RowSpan="3" Grid.ColumnSpan="2" Width="NaN" Height="NaN">
+                    <DataGrid x:Name="TechnicGrid" Grid.Row="4" AutoGenerateColumns="False" Margin="0,50,-321,50" Grid.RowSpan="3" Grid.ColumnSpan="2" Width="NaN" Height="NaN">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Код" IsReadOnly="True" Width="55" Binding="{Binding CodeEmployee}"/>
-                            <DataGridTextColumn Header="ФИО" IsReadOnly="True" Width="55" Binding="{Binding FullName}"/>
-                            <DataGridTextColumn Header="Пол" IsReadOnly="True" Width="55" Binding="{Binding GenderEmployees}"/>
-                            <DataGridTextColumn Header="Должность" IsReadOnly="True" Width="55" Binding="{Binding PostEmployee}"/>
-                            <DataGridTextColumn Header="Дата рождения" IsReadOnly="True" Width="*" Binding="{Binding DateBirthdayEmployee, StringFormat=yyyy-MM-dd}"/>
-                            <DataGridTextColumn Header="Работает с" IsReadOnly="True" Width="*" Binding="{Binding DateWorkEmployee, StringFormat=yyyy-MM-dd}"/>
-                            <DataGridTextColumn Header="Адрес" IsReadOnly="True" Width="*" Binding="{Binding AdressEmployee}"/>
-                            <DataGridTextColumn Header="Серия/номер" IsReadOnly="True" Width="*" Binding="{Binding Passport}"/>
-                            <DataGridTextColumn Header="Выдан" IsReadOnly="True" Width="*" Binding="{Binding Issued}"/>
-                            <DataGridTextColumn Header="Эл. почта" IsReadOnly="True" Width="*" Binding="{Binding EmailEmployees}"/>
-                            <DataGridTextColumn Header="Телефон" IsReadOnly="True" Width="*" Binding="{Binding TelephoneEmployee}"/>
-
+                            <DataGridTextColumn Header="Код" IsReadOnly="True" Width="55" Binding="{Binding CodeEquipment}"/>
+                            <DataGridTextColumn Header="Наименование" IsReadOnly="True" Width="55" Binding="{Binding NameEquipment}"/>
+                            <DataGridTextColumn Header="Закреплена" IsReadOnly="True" Width="55" Binding="{Binding Suppliers}"/>
+                            <DataGridTextColumn Header="Описание" IsReadOnly="True" Width="55" Binding="{Binding Description}"/>
+                            <DataGridTextColumn Header="Тип" IsReadOnly="True" Width="*" Binding="{Binding Equipment}"/>
+                            <DataGridTextColumn Header="Ремонт" IsReadOnly="True" Width="*" Binding="{Binding Repairs}"/>
+                            <DataGridTextColumn Header="Состояние" IsReadOnly="True" Width="*" Binding="{Binding Condition}"/>
+                            <DataGridTextColumn Header="Дата зачисления" IsReadOnly="True" Width="*" Binding="{Binding DateBuy, StringFormat=yyyy-MM-dd}"/>
+                            <DataGridTextColumn Header="Кабинет" IsReadOnly="True" Width="*" Binding="{Binding Location}"/>
                         </DataGrid.Columns>
 
                     </DataGrid>
