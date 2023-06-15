@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using FirstDiplome.Properties;
-using FirstDiplome.View;
+//using FirstDiplome.View;
 using MaterialDesignThemes.Wpf;
 
 namespace FirstDiplome
@@ -22,7 +22,7 @@ namespace FirstDiplome
     /// </summary>
     public partial class WindowLogin : Window
     {
-        LebedevEnd1Entities lebedevEnd1Entities = new LebedevEnd1Entities();
+        LebedevEnd1Entities2 lebedevEnd1Entities = new LebedevEnd1Entities2();
         public WindowLogin()
         {
             InitializeComponent();
@@ -61,7 +61,7 @@ namespace FirstDiplome
 
         private void loginBtn_Click(object sender, RoutedEventArgs e)
         {
-            var CurrentUser = AppData.lebedevEnd1Entities.Users.FirstOrDefault(u => u.UserLogin == txtUsername.Text && u.UserPassword == txtPassword.Password);
+            var CurrentUser = AppData.lebedevEnd1Entities2.Users.FirstOrDefault(u => u.UserLogin == txtUsername.Text && u.UserPassword == txtPassword.Password);
             if (CurrentUser != null)
             {
                 MainWindow window = new MainWindow();
